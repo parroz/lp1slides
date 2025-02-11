@@ -22,6 +22,11 @@ img[alt="pic_middle"] {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
 </style>
 
 
@@ -48,141 +53,26 @@ img[alt="pic_middle"] {
 
 # 📌 Conteúdos da Aula  
 
-- **Definições**  
-    - **Funções**  
-    - **Bibliotecas**
-    - **Tipos de erros**  
 - **Estrutura de um programa em C**
+- **Bibliotecas**
+- **Funções**
 - **Variáveis e Tipos de Dados**  
-    - **Atribuição e Inicialização**  
 
 ---
 
-# 📝 Definições  
 
-## O que é uma Função? 
-- **Bloco de código reutilizável** que realiza uma tarefa específica  
-- Permite **organizar** o código em partes menores  
-- Ajuda na **manutenção** e reutilização do código  
-- Deve ser **independente** e sem efeitos colaterais  
-
-📌 **Exemplo:**
-```c
-int soma(int a, int b) {
-    return a + b;
-}
-```
-
----
-
-## 🎯 Estrutura de uma Função  
-
-```c
-int max(int a, int b) {
-    if (a > b) 
-        return a;
-    return b;
-}
-```
+## 🏗 Estrutura de um Programa em C  
 
 📌 **Componentes principais**  
-- **Tipo de retorno** (`int`)  
-- **Nome da função** (`max`)  
-- **Parâmetros** (`int a, int b`)  
-- **Corpo** com instruções - delimitado por `{ }`
-
----
-
-## 🔖 Declaração de uma Função
-
-```c
-int max(int a, int b);
-``` 
-✔ **Diz ao compilador** que a função existe.  
-✔ **Evita erros** se a definição da função vier depois da `main()`.  
-✔ Normalmente ficam **antes da `main()` ou em arquivos `.h`**.  
-
----
-
-## 📌 Definição de uma Função  
-```c
-int max(int a, int b) 
-{
-    return (a > b) ? a : b;
-}
-```
-✔ Contém o código que executa a função
-
+1️⃣ **Inclusão de Bibliotecas**  
+2️⃣ **Declaração de Funções**  
+3️⃣ **Função Principal (`main`)**  
+4️⃣ **Definição de Funções**  
 
 
 ---
 
-
-
-## 🔁 Funções sem Retorno (`void`)
-
-- Funções podem **não retornar um valor**, utilizando `void` como tipo de retorno  
-
-📌 **Exemplo:**
-```c
-void imprimeMensagem() {
-    printf("Olá, Mundo!\n");
-}
-```
-
-📌 **Chamada da função:**
-```c
-imprimeMensagem();
-```
-
-✔ Útil para funções que apenas executam ações sem retornar valores  
-
----
-
-## 🔢 Funções com Retorno
-
-- Funções podem **devolver um valor** utilizando `return`  
-- O tipo de retorno deve ser **declarado corretamente**  
-
-📌 **Exemplo:**
-```c
-int quadrado(int x) {
-    return x * x;
-}
-```
-
-📌 **Uso da função:**
-```c
-int resultado = quadrado(4);
-printf("%d", resultado); // 16
-```
-
-✔ O tipo do retorno **deve corresponder** ao tipo declarado  
-
----
-
-## 📌 Parâmetros e Argumentos
-
-- Funções podem **receber dados de entrada** chamados **parâmetros**  
-- Os valores passados para a função são chamados **argumentos**  
-
-📌 **Exemplo de função com parâmetros:**
-```c
-int multiplica(int a, int b) {
-    return a * b;
-}
-```
-
-📌 **Chamada da função:**
-```c
-int resultado = multiplica(3, 5); // Retorna 15
-```
-
-✔ **Os parâmetros são passados na mesma ordem da definição!**  
-
----
-
-## 📚 Bibliotecas  
+### 📚 Bibliotecas  
 
 - São um **conjunto de funções** contidas num único ficheiro.  
 - Permitem **reutilização de código** e **organização eficiente**.  
@@ -199,7 +89,7 @@ int resultado = multiplica(3, 5); // Retorna 15
 
 ---
 
-## 📚 Exemplo: Biblioteca `math.h`  
+#### 📚 Exemplo: Biblioteca `math.h`  
 
 📌 **Utilização em um programa**  
 ```c
@@ -217,7 +107,7 @@ int main() {
 
 ---
 
-## 📚 Bibliotecas Mais Importantes em C  
+#### 📚 Bibliotecas Mais Importantes em C  
 
 | Biblioteca  | Descrição |
 |-------------|-------------------------------------|
@@ -229,21 +119,11 @@ int main() {
 | `ctype.h`   | Manipulação de caracteres (ex: `isdigit()`, `toupper()`) |
 | `limits.h`  | Constantes dos limites dos tipos de dados |
 
----
-
-
-## 🏗 Estrutura de um Programa em C  
-
-📌 **Componentes principais**  
-1️⃣ **Inclusão de Bibliotecas**  
-2️⃣ **Declaração de Funções**  
-3️⃣ **Função Principal (`main`)**  
-4️⃣ **Definição de Funções**  
 
 
 ---
 
-## 📌 Função Principal (`main`)  
+### 📌 Função Principal (`main`)  
 
 ```c
 int main(void) {
@@ -261,7 +141,7 @@ int main(void) {
 
 ---
 
-## Programa completo
+### 🤖 Programa completo
 
 <div class='grid'>
 <div>
@@ -303,110 +183,6 @@ int max(int a, int b) {
 
 ---
 
-## ⚠ Tipos de Erros em C  
-
-### 📝 1. Erros Léxicos  
-❌ **Erro no vocabulário** – palavras mal escritas ou caracteres inválidos.  
-
-```c
-int num#ero = 10;  // ❌ Erro léxico (caractere inválido #)
-charp ch = 'x';  // ❌ Erro léxico (palavra mal escrita)
-```
-
-✔ Ocorrem na **fase de análise léxica** do compilador.  
-
----
-
-### 📝 2. Erros Sintáticos  
-❌ **Erro gramatical** – instruções mal escritas que violam as regras da linguagem.
-<div class='grid'>
-<div>
-
-
-```c
-if x == 10 {   // ❌ Erro sintático (faltam parênteses)
-    printf("Erro!");
-}
-```
-```c
-for (x = 5, x < 10, )
-    printf("%d\n", x);
-
-// ❌ o for não está bem construído: for (x = 5; x < 10; x++)
-```
-
-</div>
-<div>
-
-```c
-if (x < 5) 
-    printf("%d\n", x);
-else
-    printf("%d\n", -x);
-else                    // ❌ não pode haver mais do que um else
-    printf("%d\n", x+2);
-
-```
-</div>
-</div>
-
-✔ São detectados pelo **compilador** e impedem a compilação.  
-
----
-
-### 📝 3. Erros Semânticos  
-❌ **Erro de interpretação** – código correto na sintaxe e na gramática, mas com comportamento inesperado.  
-<div class='grid'>
-<div>
-
-```c
-int x = 5;
-if (x = 0) {   // ❌ Erro semântico (atribuição em vez de comparação)
-    printf("Sempre falso!");
-}
-```
-</div>
-<div>
-
-```c
-int idade = 30;
-if (18 < idade < 25) {  
-    printf("Idade dentro do intervalo!\n");
-} else {
-    printf("Idade fora do intervalo!\n");
-}
-```
-</div>
-</div>
-
-        O programador queria verificar se idade está entre 18 e 25, mas a expressão não funciona corretamente em C.
-        `18 < idade < 25` é avaliada da esquerda para a direita:
-        `18 < idade` → Retorna 1 (verdadeiro).
-        `1 < 30` → Sempre retorna 1, então a condição é sempre verdadeira!
-✔ **Não são detectados pelo compilador**, mas podem causar erros lógicos.  
-
----
-
-## ✅ Resumo de tipos de erro
-
-| Tipo de Erro  | Causa  | Detectado pelo Compilador?  |
-|--------------|--------|---------------------------|
-| **Léxico**   | Palavras mal escritas  | ✔ Sim  |
-| **Sintático** | Instruções mal escritas | ✔ Sim  |
-| **Semântico** | Código incorreto logicamente | ❌ Não  |
-
-🚀 **Erros léxicos e sintáticos impedem a compilação.**  
-⚠ **Erros semânticos podem ser difíceis de encontrar!**  
-
----
-## ❓ Quizz - Intro Funcoes e Tipos de Erro
-  
-  ![pic_middle](./socrative.png)  
-
-    Group Code: SKRTJKR
-
-
----
 
 # 🔢 Representação da Informação  
 
@@ -461,33 +237,20 @@ int N = 10;
 
 ---
 
-## 📌 Tipos de dados  
+## 📝 Tipos de Dados em C - **Tipos Primitivos** 
 
 **O tipo é necessário para determinar o espaço de memória que deve ser reservado para armazenar o valor correspondente**
 
-| Tipo    | Tamanho (bytes) |
-|---------|----------------|
-| `char`  | 1 byte        |
-| `int`   | 4 bytes       |
-| `float` | 4 bytes       |
-| `double`| 8 bytes       |
+| Tipo    | Tamanho (bytes) | Descrição
+|---------|----------------|------------------------------|
+| `char`  | 1 byte        |Caracteres |
+| `int`   | 4 bytes       |Números inteiros |
+| `float` | 4 bytes       |Números reais (ponto flutuante, precisão simples) |
+| `double`| 8 bytes       |Números reais (ponto flutuante, precisão dupla) |
+| `enum`  | 4 bytes       | Lista de valores inteiros nomeados |
+
 
 ⚠ **Arquiteturas diferentes podem ter tamanhos diferentes para os tipos de dados!**  
-
----
-
-## 📝 Tipos de Dados em C  
-
-📌 **Tipos Primitivos**  
-Os tipos básicos disponíveis na linguagem C:  
-
-| Tipo    | Descrição |
-|---------|------------------------------|
-| `char`  | Caracteres (1 byte) |
-| `int`   | Números inteiros |
-| `float` | Números reais (ponto flutuante, precisão simples) |
-| `double`| Números reais (ponto flutuante, precisão dupla) |
-| `enum`  | Lista de valores inteiros nomeados |
 
 ---
 
@@ -707,7 +470,66 @@ long double constante = 6.00000023L;
 ✔ Para definir um `float`, usamos **`F`** (`3.14F`).  
 ✔ Para definir um `long double`, usamos **`L`** (`3.14L`).  
 
+
 ---
+
+## ⚠️ Imprecisão dos números de vígula flutuante
+- A precisão é limitada pelo número de bits disponíveis.
+- Nem todos os números decimais podem ser representados exatamente.
+- Pequenos erros de arredondamento podem acumular-se em cálculos sucessivos.
+
+Exemplo de erro de precisão:
+```c
+int main() {
+    float x = 0.1f + 0.2f;
+    printf("Resultado: %.10f\n", x); // Pode não ser exatamente 0.3
+    return 0;
+}
+```
+```bash
+Resultado: 0.3000000119
+```
+---
+
+## 🧠 Por que ocorre a imprecisão?
+- Os números de vígula flutuante são armazenados usando a **representação IEEE 754**.
+- Um número é representado por:
+  - **Sinal** (1 bit)
+  - **Expoente** (8 bits para `float`, 11 para `double`)
+  - **Mantissa** (23 bits para `float`, 52 para `double`)
+- Como resultado, apenas frações binárias exatas podem ser representadas.
+- Alguns números decimais, como **0.1 e 0.3**, não têm representação exata.
+
+---
+
+## 🔢 Representação binária de 0.1 e 0.3
+### Exemplo: 0.1 em IEEE 754 (32 bits)
+A conversão de `0.1` para binário resulta em uma fração periódica infinita:
+```
+0.0001100110011001100110011001100110... (binário infinito)
+```
+Que é truncada no formato `float` e é armazenado como:
+```
+IEEE 754 (32 bits): 0x3DCCCCCD
+```
+Isso causa pequenos erros quando somamos valores como `0.1f + 0.2f`.
+
+---
+
+## 🎯 Como lidar com a imprecisão?
+✅ Use `double` em vez de `float` para maior precisão.  
+✅ Evite comparar números de ponto flutuante diretamente.  
+✅ Utilize tolerância (`epsilon`) para comparações:
+```c
+#include <math.h>
+if (fabs(a - b) < 1e-6) {
+    printf("Os valores são aproximadamente iguais.\n");
+}
+```
+
+
+---
+
 
 ## 🤔 Valores Lógicos (Booleanos)  
 
@@ -730,12 +552,11 @@ int main(void) {
 
 ---
 ## ❓  Quizz - Declarção de Variáveis
-  
-  ![pic_middle](./socrative.png)  
 
-    Group Code: SKRTJKR
+<br>
+<br>
 
-
+![w:200 center](socrative.png)
 
 ---
 
@@ -770,9 +591,22 @@ float resultado = (float)x / y;  // Sem casting: 5/2 = 2 (int)
 ### ❓ Identifique quais são válidas e inválidas:  
 
 ```c
-int x, X;  // Válido
-char c, double d;  // Inválido
-char char;  // Inválido
+int x, X;
+char c, double d;
+char char;
+```
+
+---
+
+
+# 📝 Exercício (Solução)
+
+### ❓ Identifique quais são válidas e inválidas:  
+
+```c
+int x, X; // Válido
+char c, double d; // Inválido
+char char; // Inválido
 ```
 
 📌 **Dicas:**  
@@ -782,6 +616,8 @@ char char;  // Inválido
 ---
 
 # ❓ Exercício  
+
+Qual o valor gravado na variável `c` em cada linha do seguinte código
 ```c
 int a = 5, b = 1;
 float d = 1.0;
@@ -792,6 +628,23 @@ c = d / a;
 c = b / a;
 
 c = (float) b / a;
+```
+---
+
+
+# ❓ Exercício  (solução)
+
+Qual o valor gravado na variável `c` em cada linha do seguinte código
+```c
+int a = 5, b = 1;
+float d = 1.0;
+float c;
+
+c = d / a; // c = (float)1.0 / (int)5 = 0.2
+
+c = b / a; // c = (int)1 / (int)5 = 0
+
+c = (float) b / a; // c = (float)1 / (int)5 = 0.2
 ```
 ---
 
@@ -843,6 +696,146 @@ const float PI = 3.1415;  // Definição com `const`
 📌 **Quando usar qual?**  
 ✔ **Use `#define`** para constantes simples (exemplo: tamanhos de arrays).  
 ✔ **Use `const`** para variáveis que devem ter um tipo definido.  
+
+
+
+---
+
+
+
+# 📝 Funções  
+
+## O que é uma Função? 
+- **Bloco de código reutilizável** que realiza uma tarefa específica  
+- Permite **organizar** o código em partes menores  
+- Ajuda na **manutenção** e reutilização do código  
+- Deve ser **independente** e sem efeitos colaterais  
+
+📌 **Exemplo:**
+```c
+int soma(int a, int b) {
+    return a + b;
+}
+```
+
+---
+
+## 🎯 Estrutura de uma Função  
+
+```c
+int max(int a, int b) {
+    if (a > b) 
+        return a;
+    return b;
+}
+```
+
+📌 **Componentes principais**  
+- **Tipo de retorno** (`int`)  
+- **Nome da função** (`max`)  
+- **Parâmetros** (`int a, int b`)  
+- **Corpo** com instruções - delimitado por `{ }`
+
+---
+
+## 🔖 Declaração de uma Função
+
+```c
+int max(int a, int b);
+``` 
+✔ **Diz ao compilador** que a função existe.  
+✔ **Evita erros** se a definição da função vier depois da `main()`.  
+✔ Normalmente ficam **antes da `main()` ou em arquivos `.h`**.  
+
+---
+
+## 📌 Definição de uma Função  
+```c
+int max(int a, int b) 
+{
+    return (a > b) ? a : b;
+}
+```
+✔ Contém o código que executa a função
+
+
+
+---
+
+
+
+## 🔁 Funções sem Retorno (`void`)
+
+- Funções podem **não retornar um valor**, utilizando `void` como tipo de retorno  
+
+📌 **Exemplo:**
+```c
+void imprimeMensagem() {
+    printf("Olá, Mundo!\n");
+}
+```
+
+📌 **Chamada da função:**
+```c
+imprimeMensagem();
+```
+
+✔ Útil para funções que apenas executam ações sem retornar valores  
+
+---
+
+## 🔢 Funções com Retorno
+
+- Funções podem **devolver um valor** utilizando `return`  
+- O tipo de retorno deve ser **declarado corretamente**  
+
+📌 **Exemplo:**
+```c
+int quadrado(int x) {
+    return x * x;
+}
+```
+
+📌 **Uso da função:**
+```c
+int resultado = quadrado(4);
+printf("%d", resultado); // 16
+```
+
+✔ O tipo do retorno **deve corresponder** ao tipo declarado  
+
+---
+
+## 📌 Parâmetros e Argumentos
+
+- Funções podem **receber dados de entrada** chamados **parâmetros**  
+- Os valores passados para a função são chamados **argumentos**  
+
+📌 **Exemplo de função com parâmetros:**
+```c
+int multiplica(int a, int b) {
+    return a * b;
+}
+```
+
+📌 **Chamada da função:**
+```c
+int resultado = multiplica(3, 5); // Retorna 15
+```
+
+✔ **Os parâmetros são passados na mesma ordem da definição!**  
+
+---
+
+## ❓  Quizz - Funções
+
+<br>
+<br>
+
+![w:200 center](socrative.png)
+
+
+
 
 ---
 
