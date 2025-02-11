@@ -29,17 +29,20 @@ img[alt="pic_middle"] {
 ## 📚 Aula #2
 
 ### 💬 Message of the Day  
-*"Simplicity is prerequisite for reliability."*  
+*"Simplicity is prerequisite for reliability."*
+*“The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.”* 
 — Edsger W. Dijkstra  
 
 ---
 
 # 🎓 Edsger Dijkstra (1930 – 2002)  
 
-- Pioneiro da ciência da computação  
-- Criador do **algoritmo de Dijkstra** para encontrar o caminho mais curto  
+- Desenvolveu o **Algoritmo de Dijkstra** para encontrar o caminho mais curto num grafo.
+- Defendeu a **programação estruturada** e as **melhores práticas de engenharia de software**.
 - Trabalhos fundamentais em **concorrência, exclusão mútua, deadlock**  
-- **Vencedor do Prêmio Turing**, considerado o "Nobel da Computação"  
+- **Vencedor do Prêmio Turing**, considerado o "Nobel da Computação"
+
+- Coined the phrase **“Goto considered harmful”**.
 
 ---
 
@@ -57,12 +60,18 @@ img[alt="pic_middle"] {
 
 # 📝 Definições  
 
-## O que é uma Função?  
-Uma **função** é um bloco de instruções com um nome que:  
-✔ Um bloco é uma sequência de instruções delimitada por `{ }`
-✔ Pode ser **invocado pelo nome**  
-✔ Pode **receber parâmetros**  
-✔ Pode **devolver um valor**  
+## O que é uma Função? 
+- **Bloco de código reutilizável** que realiza uma tarefa específica  
+- Permite **organizar** o código em partes menores  
+- Ajuda na **manutenção** e reutilização do código  
+- Deve ser **independente** e sem efeitos colaterais  
+
+📌 **Exemplo:**
+```c
+int soma(int a, int b) {
+    return a + b;
+}
+```
 
 ---
 
@@ -103,6 +112,73 @@ int max(int a, int b)
 }
 ```
 ✔ Contém o código que executa a função
+
+
+
+---
+
+
+
+## 🔁 Funções sem Retorno (`void`)
+
+- Funções podem **não retornar um valor**, utilizando `void` como tipo de retorno  
+
+📌 **Exemplo:**
+```c
+void imprimeMensagem() {
+    printf("Olá, Mundo!\n");
+}
+```
+
+📌 **Chamada da função:**
+```c
+imprimeMensagem();
+```
+
+✔ Útil para funções que apenas executam ações sem retornar valores  
+
+---
+
+## 🔢 Funções com Retorno
+
+- Funções podem **devolver um valor** utilizando `return`  
+- O tipo de retorno deve ser **declarado corretamente**  
+
+📌 **Exemplo:**
+```c
+int quadrado(int x) {
+    return x * x;
+}
+```
+
+📌 **Uso da função:**
+```c
+int resultado = quadrado(4);
+printf("%d", resultado); // 16
+```
+
+✔ O tipo do retorno **deve corresponder** ao tipo declarado  
+
+---
+
+## 📌 Parâmetros e Argumentos
+
+- Funções podem **receber dados de entrada** chamados **parâmetros**  
+- Os valores passados para a função são chamados **argumentos**  
+
+📌 **Exemplo de função com parâmetros:**
+```c
+int multiplica(int a, int b) {
+    return a * b;
+}
+```
+
+📌 **Chamada da função:**
+```c
+int resultado = multiplica(3, 5); // Retorna 15
+```
+
+✔ **Os parâmetros são passados na mesma ordem da definição!**  
 
 ---
 
@@ -213,11 +289,11 @@ int max(int a, int b) {
 ← Inclusão de Bibliotecas
 
 ← Declaração de Funções
+<br>
 
 
 ← Função `main()`
 
-<br>
 <br>
 <br>
 ← Definição de Funções
