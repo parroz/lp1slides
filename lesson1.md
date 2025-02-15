@@ -17,6 +17,11 @@ img[alt="pic_middle"] {
   height: 150px; /* Keep aspect ratio */
   vertical-align: middle; /* Align text with the image */
 }
+img[alt="pic_middle_med"] {
+  width: auto;  /* Adjust width */
+  height: 50px; /* Keep aspect ratio */
+  vertical-align: middle; /* Align text with the image */
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,14 +180,12 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 
 ---
 
-# 📍 Informações do Curso
+# ![pic_middle_med](./lesson1_images/moodle.png) **Conteúdos no Moodle**
 - Conteúdos disponíveis no **Moodle do Curso de LEI** 
 
-💬 **Canal Slack** 
-- Tire dúvidas, acompanhe anúncios e participe nas discussões. 
-
-- 📱 **Junte-se ao grupo utilizando o QR Code:**  
-
+# ![pic_middle_med](./lesson1_images/slack.png) **Canal Slack** 
+- Tira dúvidas, acompanha anúncios e participa nas discussões. 
+- 📱 **Junta-te ao grupo utilizando o QR Code:**  
     ![pic_middle](./slackQRcode.png)  
 
 ---
