@@ -283,8 +283,6 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 ---
 
 
----
-
 # ⚠️ Desvantagens do C  
 
 🛠 **Erros e Dificuldades:**  
@@ -460,6 +458,21 @@ int resultado = a + b;
 
 ---
 
+
+## ❓  Quizz - Expressões, Instruções e Comentários
+
+<br>
+<br>
+
+![w:200 center](socrative.png)
+
+
+
+
+---
+
+
+
 ## ⚠ Tipos de Erros em C  
 
 ### 📝 1. Erros Léxicos  
@@ -575,14 +588,14 @@ if (18 < idade < 25) {
 
 ## Estrutura Básica de um Programa em C
 
-    ```c                         
-    #include <stdio.h>
+```c                         
+#include <stdio.h>
 
-    int main() {
-        printf("Olá, Mundo!\n");
-        return 0;
-    }
-    ```
+int main() {
+    printf("Olá, Mundo!\n");
+    return 0;
+}
+```
 
 - 🛠 **Preprocessador**: `#include <stdio.h>`  
 - 📌 **Função principal**: `int main()`  
