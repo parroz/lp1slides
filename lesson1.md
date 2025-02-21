@@ -43,9 +43,9 @@ img[alt~="center"] {
 ---
 
 # 🎓 Alan Turing (1912–1954)
-- Developed the Turing Machine, laying the foundation for modern computation.
-- Played a crucial role in breaking the Enigma code during WWII.
-- Proposed the Turing Test for artificial intelligence.
+* Desenvolveu a máquina de Turing (1936) que formalizou a ideia de **algoritmo**
+- Desempenhou um papel fundamental na segunda guerra mundial por ter desencriptado o código alemão com a ajuda de uma máquina electromagnética que desenvolveu para acelerar a desencriptação. Salvou milhões de vidas e encurtou a guerra.
+* Propôs o teste de Turing que é utilizado na inteligência artificial
 
 ---
 
@@ -61,30 +61,33 @@ img[alt~="center"] {
 
 ---
 
-# 🎯 Objetivos do Curso
-## O que vais aprender neste curso?
-- **Compreender os princípios fundamentais da computação** 
- _O que acontece nos bastidores quando programas são executados?_ 
-- **Desenvolver pensamento lógico e habilidades de resolução de problemas** 
- _Programação não é sobre decorar sintaxe, mas sobre pensar estruturadamente._ 
-- **Saber o que está por trás de ferramentas como garbage collectors** 
- _AI pode escrever código, mas quem compreende como ele funciona tem vantagem._ 
+# Módulo 0 - Unidade Curricular
 
 ---
 
-# 🎯 Objetivos do Curso (cont.)
-- **Explorar estruturas de dados e gestão da memória** 
+## 🎯 Objetivos do Curso
+### O que vais aprender neste curso?
+* **Compreender os princípios fundamentais da computação** 
+ _O que acontece nos bastidores quando programas são executados?_ 
+* **Desenvolver pensamento lógico e habilidades de resolução de problemas** 
+ _Programação não é sobre decorar sintaxe, mas sobre pensar estruturadamente._ 
+* **Saber o que está por trás de ferramentas como garbage collectors** 
+ 
+---
+
+## 🎯 Objetivos do Curso (cont.)
+* **Explorar estruturas de dados e gestão da memória** 
  _Por que algumas linguagens têm garbage collector? Como otimizar memória em C?_ 
-- **Criar e analisar programas de forma eficiente** 
+* **Criar e analisar programas de forma eficiente** 
  _Debug, otimização e boas práticas para escrever código sustentável._ 
-- **Conhecer a linguagem C e sua relevância em engenharia** 
+* **Conhecer a linguagem C e sua relevância em engenharia** 
  _C continua a ser usado em sistemas embebidos, OS, e aplicações de alto desempenho._ 
-- **Aprender a avaliar código gerado por IA** 
+* **Aprender a avaliar código gerado por IA** 
  _Saber quando um código gerado por AI é eficiente, seguro e adequado ao problema._ 
 
 ---
 
-# 📌 Objectivo Geral
+## 📌 Objectivo Geral
 _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gestão de memória estrutura lógica sólida._
 
 ---
@@ -92,101 +95,101 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 
 ## 🤔 Programação Além do Código
 
-- 🛠 Programar não é apenas escrever código, mas sim **resolver problemas**.  
-- 🤖 Ferramentas como **AI podem gerar código, mas não podem pensar por ti**.  
-- 🚀 O que te diferencia como engenheiro é a tua capacidade de **analisar, depurar, otimizar código** além do teu **pensamento crítico**.
+* 🛠 Programar não é apenas escrever código, mas sim **resolver problemas**.  
+* 🤖 Ferramentas como **AI podem gerar código, mas não podem pensar por ti**.  
+* 🚀 O que te diferencia como engenheiro é a tua capacidade de **analisar, depurar, otimizar código** além do teu **pensamento crítico**.
 
 
 ---
 
 ## 💡Como Aprender a Programar (Sem Depender de AI)
 
-- 🔹 Aprender a **depurar código** é mais importante do que escrevê-lo.  
-- 🔹 Faz perguntas como: **Porque é que este código funciona? Como poderia ser melhorado?**  
-- 🔹 Testa, experimenta e falha — aprender programação envolve **tentativa e erro**.  
+* 🔹 Aprender a **depurar código** é mais importante do que escrevê-lo.  
+* 🔹 Faz perguntas como: **Porque é que este código funciona? Como poderia ser melhorado?**  
+* 🔹 Testa, experimenta e falha — aprender programação envolve **tentativa e erro**.  
 
 ---
 
 
-
-
-
-
-# 📌 Programa da Disciplina
-## Módulo 0 - Introdução à Unidade Curricular
+## 📌 Programa da Disciplina
+### Módulo 0 - Unidade Curricular
 - Apresentação da UC 
 
 ---
 
-# 📌 Programa da Disciplina (cont.)
-## Módulo 1 - Fundamentos da Programação em C
+## 📌 Programa da Disciplina (cont.)
+### Módulo 1 - Fundamentos da Programação em C
 - Definições, Escrever, compilar e executar um programa 
 - Tipos de dados
 - Operadores 
 - Instruções de seleção e ciclos 
 
-## Módulo 2 - Arrays, Strings e Estruturas de Dados Simples
+### Módulo 2 - Arrays, Strings e Estruturas de Dados Simples
 - Arrays e Strings
 - Introdução a estruturas (`structs`) 
 
 ---
 
-# 📌 Programa da Disciplina (cont.)
-## Módulo 3 - Modularização e Boas Práticas
+## 📌 Programa da Disciplina (cont.)
+### Módulo 3 - Modularização e Boas Práticas
 - Criar funções reutilizáveis 
 - Passagem de parâmetros e escopo de variáveis 
 - Debugging básico e boas práticas 
 - Recursão e sua aplicação 
 
-## Módulo 4 - Apontadores e Gestão da Stack
+### Módulo 4 - Apontadores e Gestão da Stack
 - Conceito de apontadores
 - Uso de apontadores em funções
 - Gestão de memória na Stack
 
 ---
 
-# 📌 Programa da Disciplina (cont.)
-## Módulo 5 - Leitura e Escrita de Ficheiros
+## 📌 Programa da Disciplina (cont.)
+### Módulo 5 - Leitura e Escrita de Ficheiros
 - Introdução à manipulação de ficheiros 
 - Leitura e escrita de dados 
 - Organização do código para uso de ficheiros 
 
-## Módulo 6 - Gestão de Memória e Heap
+### Módulo 6 - Gestão de Memória e Heap
 - Alocação e desalocação dinâmica 
 - Uso correto de `malloc()`, `free()`, `realloc()` 
 - Evitando memory leaks e segmentation faults 
 
 ---
-# 📌 Programa da Disciplina (cont.)
+## 📌 Programa da Disciplina (cont.)
 
-## Módulo 7 - Estruturas de Dados Dinâmicas
+### Módulo 7 - Estruturas de Dados Dinâmicas
 - Listas Ligadas 
 - Introdução a Pilhas e Filas 
 - Boas práticas no uso de estruturas dinâmicas 
 
-## Módulo 8 - Conceitos Avançados e Recursão
+### Módulo 8 - Organização de Código
 - Organização de código grande 
 - Boas práticas para código sustentável 
 
 ---
 
 
-# 👨‍🏫 Equipa Docente
+## 👨‍🏫 Equipa Docente
 
-📩 **Pedro Arroz Serra** - [pedro.serra@ulusofona.pt](mailto:pedro.serra@ulusofona.pt)  
-📩 **Daniel Silveira** - [daniel.silveira@ulusofona.pt](mailto:daniel.silveira@ulusofona.pt)  
-📩 **Martijn Kuipers** - [martijn.kuipers@ulusofona.pt](mailto:martijn.kuipers@ulusofona.pt)  
-📩 **Giosuè Muratore** - [p8344@ulusofona.pt](mailto:p8344@ulusofona.pt)  
+* 📩 **Pedro Arroz Serra** - [pedro.serra@ulusofona.pt](mailto:pedro.serra@ulusofona.pt)  - https://www.linkedin.com/in/pedroarroz/
+
+* 📩 **Daniel Silveira** - [daniel.silveira@ulusofona.pt](mailto:daniel.silveira@ulusofona.pt)  
+
+* 📩 **Martijn Kuipers** - [martijn.kuipers@ulusofona.pt](mailto:martijn.kuipers@ulusofona.pt)  
+
+* 📩 **Giosuè Muratore** - [p8344@ulusofona.pt](mailto:p8344@ulusofona.pt)  
 
 ---
 
-# ![pic_middle_med](./lesson1_images/moodle.png) **Conteúdos no Moodle**
-- Conteúdos disponíveis no **Moodle do Curso de LEI** 
+# 🗂️ Conteúdos
+* ![pic_middle_med](./lesson1_images/moodle.png) **Conteúdos no Moodle da Lusófona - Curso de LEI** 
 
-# ![pic_middle_med](./lesson1_images/slack.png) **Canal Slack** 
-- Tira dúvidas, acompanha anúncios e participa nas discussões. 
-- 📱 **Junta-te ao grupo utilizando o QR Code:**  
-    ![pic_middle](./slackQRcode.png)  
+* ![pic_middle_med](./lesson1_images/deisi-logo-sm.png) **Exercícios Práticos no Moodle do DEISI - https://moodle.deisi.ulusofona.pt/**
+
+* Juntem-se ao grupo **LP1**. Password: `inlp1`
+
+* ![pic_middle_med](./lesson1_images/slack.png) **Canal Slack** ![pic_middle](./slackQRcode.png)  
 
 ---
 
@@ -197,9 +200,14 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 
 ### **🎓 Componente Teórica (50%)**
 
-- 📑 **Frequência Intermédia** (45%)
-- 📑 **Frequência Final** (55%)
+- 📑 **Frequência Intermédia** (42.5%)
+- 📑 **Frequência Final** (52.5%)
+- 📑 **Quizzes** (5%)
 - 🎯 **Nota mínima**: 9.5
+
+
+</div>
+<div>
 
 ### **🏃‍♀️ Componente Prática (50%)**
 
@@ -208,13 +216,13 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 - 💡 **Projeto Final** (40% - 🎯 9.5 min.)
 - 🎯 **Nota mínima**: 9.5
 
+
+
+
 </div>
-<div>
+</div>
 
 🔴 Se um aluno não alcançar a nota mínima numa das componentes, poderá realizar **exame de segunda época** (teórica) ou **projeto de segunda época** (prática).
-
-</div>
-</div>
 
 ---
 
@@ -247,7 +255,12 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 
 # 📅 Datas Importantes  
 
-📌 **Frequência Intermédia:** 🗓️ **29/03/2024**  
+* 🧐🧑‍💻 **Frequência Intermédia:** 🗓️ **29/03/2024** - 10:00
+* 💻 Devem trazer um computador portatil (com a bateria carregada 🔋🔋)
+
+---
+
+# Módulo 1 - Fundamentos da Programação em C
 
 ---
 
@@ -279,9 +292,8 @@ _Desenvolver a capacidade de criar programas eficientes e rápidos, com boa gest
 
 # 🌍 C é uma das Linguagens Mais Usadas  
 
-📌 **Ranking TIOBE:**  
+📌 **Ranking TIOBE (https://www.tiobe.com/tiobe-index/):**  
 ![center](./lesson1_images/tiobe.jpg)  
-
 
 ---
 
@@ -354,6 +366,13 @@ x <= y      // Expressão relacional (1 se verdadeiro, 0 se falso)
 📌 Em C, **true** é representado por `1` e **false** por `0`.  
 
 ---
+
+```c
+x = y = z = 10;
+```
+
+---
+
 
 ✅ **📍 Expressão Infixa** - **O operador aparece entre os operandos.**  
 ```c
@@ -502,7 +521,7 @@ if x == 10 {   // ❌ Erro sintático (faltam parênteses)
 }
 ```
 ```c
-for (x = 5, x < 10, )
+for (x = 5; x < 10; else x++)
     printf("%d\n", x);
 
 // ❌ o for não está bem construído: for (x = 5; x < 10; x++)
@@ -555,7 +574,7 @@ if (18 < idade < 25) {
         O programador queria verificar se idade está entre 18 e 25, mas a expressão não funciona corretamente em C.
         `18 < idade < 25` é avaliada da esquerda para a direita:
         `18 < idade` → Retorna 1 (verdadeiro).
-        `1 < 30` → Sempre retorna 1, então a condição é sempre verdadeira!
+        `1 < 25` → Sempre retorna 1, então a condição é sempre verdadeira!
 ✔ **Não são detectados pelo compilador**, mas podem causar erros lógicos.  
 
 ---

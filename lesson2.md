@@ -2,8 +2,18 @@
 marp: true
 theme: default
 paginate: true
+transition: fade
 header: "📚 Linguagens de Programação 1 | LEI, LEIRT, LIG"
 footer: "![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt"
+style: |
+  section li {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  section.show li:nth-child(1) { animation: fadeIn 0.5s ease-in forwards; }
+  section.show li:nth-child(2) { animation: fadeIn 0.8s ease-in forwards; }
+  section.show li:nth-child(3) { animation: fadeIn 1.1s ease-in forwards; }
+  @keyframes fadeIn { to { opacity: 1; } }
 ---
 
 <style>
@@ -27,6 +37,7 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+
 </style>
 
 
@@ -42,12 +53,10 @@ img[alt~="center"] {
 
 # 🎓 Edsger Dijkstra (1930 – 2002)  
 
-- Desenvolveu o **Algoritmo de Dijkstra** para encontrar o caminho mais curto num grafo.
-- Defendeu a **programação estruturada** e as **melhores práticas de engenharia de software**.
-- Trabalhos fundamentais em **concorrência, exclusão mútua, deadlock**  
-- **Vencedor do Prêmio Turing**, considerado o "Nobel da Computação"
-
-- Coined the phrase **“Goto considered harmful”**.
+* Desenvolveu o **Algoritmo de Dijkstra** para encontrar o caminho mais curto num grafo.
+* Defendeu a **programação estruturada** e as **melhores práticas de engenharia de software**.
+* Trabalhos fundamentais em **concorrência, exclusão mútua, deadlock**  
+* **Vencedor do Prêmio Turing**, considerado o "Nobel da Computação"
 
 ---
 
