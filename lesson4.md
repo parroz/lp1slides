@@ -39,7 +39,8 @@ ul { list-style-type: none; padding-left: 0;}
 
 
 ```c
-printf("\aAula #4 - Instruções de Controlo\n");
+int aula = 3;
+printf("\aAula #%d - Instruções de Controlo\n", aula * 2 - 2);
 ```
 
 </div>

@@ -46,6 +46,7 @@ img[alt~="center"] {
 * Desenvolveu a máquina de Turing (1936) que formalizou a ideia de **algoritmo**
 - Desempenhou um papel fundamental na segunda guerra mundial por ter desencriptado o código alemão com a ajuda de uma máquina electromagnética que desenvolveu para acelerar a desencriptação. Salvou milhões de vidas e encurtou a guerra.
 * Propôs o teste de Turing que é utilizado na inteligência artificial
+* Conhecido como o _“pai da computação moderna”_.
 
 ---
 
