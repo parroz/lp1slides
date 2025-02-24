@@ -40,7 +40,7 @@ ul { list-style-type: none; padding-left: 0;}
 
 ```c
 int aula = 3;
-printf("\aAula #%d - Instruções de Controlo\n", aula * 2 - 2);
+printf("\aAula #%d - Instrucoes de Controlo\n", aula * 2 - 2);
 ```
 
 </div>
@@ -329,6 +329,28 @@ x = (a == b) ? 0 : (a > b) ? a : b;
 </div>
 
 
+---
+## ❔ Operador Ternário - fluxograma
+
+* 💡 Quando a operação é complexa devemos fazer um **fluxograma**
+
+<div data-marpit-fragment>
+
+```c
+x = (a == b) ? 0 : (a > b) ? a : b;
+```
+
+</div>
+
+<div data-marpit-fragment>
+
+
+![Fluxograma](./lesson2_images/blkdiagram.png)
+
+
+</div>
+
+
 
 
 ---
@@ -428,10 +450,14 @@ int isVowel(char c) {
 ## ❓  Quizz Instruções de Seleccão
 
 <br>
-<br>
 
 ![w:200 center](socrative.png)
 
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 ---
 
@@ -600,10 +626,13 @@ for (int i = 1; i <= 5; i++) {
 ## ❓  Quizz Estruturas de Repetição
 
 <br>
-<br>
 
 ![w:200 center](socrative.png)
 
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 ---
 # Funções e Scope de Variáveis
@@ -733,11 +762,14 @@ int main() {
 ## ❓  Quizz - Funções e Variáveis
 
 <br>
-<br>
 
 ![w:200 center](socrative.png)
 
 
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 ---
 

@@ -810,3 +810,10 @@ if (a < b && b < c) {
 }
 ```
 ✅ **Tenta responder antes de executar o código!** 
+
+
+---
+
+# ❓ Q&A  
+
+💬 **Dúvidas?**  
