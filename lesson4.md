@@ -532,7 +532,7 @@ Valor valido lido: 5
 <div data-marpit-fragment>
 
 ```c
-for (i = 0; i < 5; i++) {
+for (int i = 0; i < 5; i++) {
     printf("%d\n", i);
 }
 ```
