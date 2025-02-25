@@ -293,6 +293,22 @@ int main() {
 
 ---
 
+## ❓  Quizz - Entradas e Saídas Pré-formatadas
+
+<br>
+
+![w:200 center](socrative.png)
+
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
+
+---
+
+
+
 # 🔣 Operadores
 
 ---
@@ -566,6 +582,20 @@ x /= 4; // 🟢 x agora é 5
 
 ---
 
+## ❓  Quizz Operadores Aritméticos e de Atribuição
+
+<br>
+
+![w:200 center](socrative.png)
+
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
+
+---
+
 ## 📈 Operadores de Incremento e Decremento 📉  
 
 ---
@@ -662,6 +692,20 @@ printf("i = %d, j = %d, k = %d\n", i, j, k);
 (D) `i = 2, j = 3, k = 5`  
 
 🔎 **Tenta resolver e depois experimenta o código!**  
+
+---
+
+## ❓  Quizz Operadores Unários (++ --)
+
+<br>
+
+![w:200 center](socrative.png)
+
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 ---
 
@@ -810,6 +854,21 @@ if (a < b && b < c) {
 }
 ```
 ✅ **Tenta responder antes de executar o código!** 
+
+
+---
+
+## ❓  Quizz Operadores Relacionais
+
+<br>
+
+![w:200 center](socrative.png)
+
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 
 ---
