@@ -107,7 +107,7 @@ printf("Idade: %d anos\n", idade);
 | Formato | Tipo de Dado | Exemplo | Saída |
 |---------|------------|---------|-------|
 | `%d` ou `%i`    | Inteiro Decimal | `printf("%d", 42);` | `42` |
-| `%x`, `X`    | Hexadecimal | `printf("%x, %X", 255, 170);` | `ff, AA` |
+| `%x`, `%X`    | Hexadecimal | `printf("%x, %X", 255, 170);` | `ff, AA` |
 | `%o`    | Octal | `printf("%o", 255);` | `377` |
 | `%u`    | Inteiro Decimal sem sinal | `printf("%u", 10);` | `10` |
 
@@ -120,6 +120,10 @@ printf("Idade: %d anos\n", idade);
 | `%c`    | Caractere | `printf("%c", 'A');` | `A` |
 | `%s`    | String | `printf("%s", "Ola");` | `Ola` |
 | `%f`    | Numero real | `printf("%.2f", 3.1415);` | `3.14` |
+
+
+* Supor que: `printf("%c", 97);`
+
 
 ---
 
@@ -154,7 +158,7 @@ float pi = 3.14159
 | Formato | Exemplo | Saída | Explicação |
 |---------|---------|-------|------------|
 | `%4.2f` | `printf("*%4.2f*", pi);` | `*3.14*` | imprime `pi` ocupando 4 caracteres, 2 à direita da vírgula. |
-| `%05.2f` | `printf("*%4.2f*", pi);` | `*03.14*` | imprime `pi` ocupando 4 caracteres, 2 à direita da vírgula. Preenche os epaços com 0's |
+| `%05.2f` | `printf("*%05.2f*", pi);` | `*03.14*` | imprime `pi` ocupando 5 caracteres, 2 à direita da vírgula. Preenche os epaços com 0's |
 
 
 ⚠️ **A vírgula também é um caracter**
@@ -809,6 +813,7 @@ if (x = y) { // ❌ ERRO: Atribuição em vez de comparação
 </div>
 <div>
 
+
 <div data-marpit-fragment>
 
 ```c
@@ -824,39 +829,50 @@ if (idade > 18 && idade < 65) {
 
 ---
 
-### ⚡ Avaliação Curta-Circuito  
-* 📌 **Nos operadores `&&` e `||`, o segundo operando só é avaliado se necessário.**  
+## 🧠 Operadores Lógicos  
 
-```c
-int x = 0, y = 10;
-if (x != 0 && y / x > 2) {  // ❌ ERRO: Divisão por zero
-    printf("Expressão válida");
-}
-```
+<div class='grid'>
+<div>
 
-✅ **Solução:**  
-```c
-if (x != 0 && (y / x > 2)) {
-    printf("Expressão válida");
-}
-```
+
+* **AND**
+
+| `&&` | 0 | 1|
+|--|-|-|
+| 0 | 0 |  0 |
+| 1| 0 | 1 |
+
+</div>
+<div>
+
+* **OR**
+
+| `\|\|` | 0 | 1|
+|--|-|-|
+| 0 | 0 |  1 |
+| 1| 1 | 1 |
+
+</div>
+</div>
+
+* **NOT**
+
+| `!` | Saida |
+|--|-|
+| !0 | 1 |
+| !1 | 0 |
 
 ---
 
-# 📝 Exercício  
-📌 O que será impresso no código abaixo?  
-```c
-int a = 5, b = 10, c = 15;
-if (a < b && b < c) {
-    printf("Ordem correta\n");
-} else {
-    printf("Ordem incorreta\n");
-}
-```
-✅ **Tenta responder antes de executar o código!** 
+## 🧠 Operadores Lógicos Exemplos
+
+* `!(-10) = 0`
+* `!10 = 0`
+* `!(- a + a) = 1`
 
 
 ---
+
 
 ## ❓  Quizz Operadores Relacionais
 

@@ -69,33 +69,87 @@ _“Anyone who attempts to generate random numbers by deterministic means is, of
 - **Funções úteis** para manipular tudo isso
 
 ---
+<div class='grid'>
+<div>
 
 # 🎯 Vectores (Arrays)
 
-- Um vector é um conjunto de elementos do **mesmo tipo**.
-- Ocupam **posições contíguas** na memória.
-- Índices começam em **0**! 🚨
+* Um vector é um conjunto de elementos do **mesmo tipo**.
+* Ocupam **posições contíguas** na memória.
+* Índices começam em **0**! 🚨
+
+<div data-marpit-fragment>
 
 ```c
-int socos[5] = {100, 120, 90, 130, 110};
+char socos[5] = {100, 120, 90, 130, 110};
 printf("Soco mais forte: %d\n", socos[3]); // 130
 ```
+</div>
 
-💡 **Dica**: Para inicializar tudo com `0`, faz `int golpes[10] = {0};`!
+* 📌 A tabela exemplifica o modelo de memória. Os Endereços são definidos no momento em que o programa corre.
+
+
+</div>
+<div>
+
+<div data-marpit-fragment>
+
+
+| Endereço | Conteudo | Identificador |
+|------|------|---------|
+| 1024 | 100  |socos[0] |
+| 1025 | 120  |socos[1] |
+| 1026 | 90   |socos[2] |
+| 1027 | 130  |socos[3] |
+| 1028 | 110  |socos[4] |
+|      | 1024 |socos    |
+|...   |      |         |
+
+</div>
+
+
+* 📌 a variável `socos` contém o endereço de memória do elemento `socos[0]` (primeiro elemento do vector) 
+
+</div>
+</div>
+
+
+
+---
+# 🧮 Vectores (Arrays)
+
+* 📍 **Declaração de vectores**
+
+* `tipo nome_do_vector[nr_de_elementos];`
+
+* 🖌️ o tipo pode ser qualquer um dos tipos que já conhecemos: `char`, `int`, `float`, `double`, `enum`.
+* 🖍️ pode ainda ser precedido dos qualificadores: `long`, `short`, `signed`, `unsigned`.
+* 🖋️ Também podem ser de tipos criados por nós (vamos ver mais à frente)
+
+* **Exemplos:**
+
+```c
+int players[50];
+double energy[50];
+```
 
 ---
 
+
+
 # 🔄 Percorrer um Vector
 
-Usamos um **ciclo `for`** para iterar pelos elementos:
+* São indexados a partir da posição 0, até à posição n-1 (sendo n o número de elementos).
+
+* Usamos um **ciclo `for`** para iterar pelos elementos:
 
 ```c
 for (int i = 0; i < 5; i++) {
-    printf("Soco %d: %d\n", i + 1, socos[i]);
+    printf("Soco[%d]: %d\n", i, socos[i]);
 }
 ```
 
-📌 **Curiosidade**: Como os elementos são **contíguos**, podes usar **aritmética de ponteiros** para percorrer o array!
+* 💡 **Dica**: Para inicializar tudo com `0`, faz `int golpes[10] = {0};`
 
 ---
 
