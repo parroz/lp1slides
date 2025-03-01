@@ -888,6 +888,22 @@ if (idade > 18 && idade < 65) {
 
 
 ---
+<div class='grid'>
+<div>
+
+## Precedência dos operadores
+
+* 1 - mais prioritário = avaliado primeiro
+* 15 - menos prioritário = avaliado em último
+
+</div>
+<div>
+
+![w:600 center](lesson3_images/precedencias.png)
+
+</div>
+
+---
 
 # ❓ Q&A  
 

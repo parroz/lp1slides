@@ -94,21 +94,25 @@ printf("Soco mais forte: %d\n", socos[3]); // 130
 
 <div data-marpit-fragment>
 
+<sub>Modelo da memória RAM:</sub>
+
+<small>
 
 | Endereço | Conteudo | Identificador |
-|------|------|---------|
-| 1024 | 100  |socos[0] |
-| 1025 | 120  |socos[1] |
-| 1026 | 90   |socos[2] |
-| 1027 | 130  |socos[3] |
-| 1028 | 110  |socos[4] |
-|      | 1024 |socos    |
-|...   |      |         |
+|------|------|-----------|
+| 1024 | 100  |`socos[0]` |
+| 1025 | 120  |`socos[1]` |
+| 1026 | 90   |`socos[2]` |
+| 1027 | 130  |`socos[3]` |
+| 1028 | 110  |`socos[4]` |
+|      | 1024 |`socos`    |
+|...   |      |           |
+
+</small>
 
 </div>
 
-
-* 📌 a variável `socos` contém o endereço de memória do elemento `socos[0]` (primeiro elemento do vector) 
+* <small>📌 a variável `socos` contém o endereço de memória do elemento `socos[0]` (primeiro elemento do vector) 🤔🤔🤔🤔</small>
 
 </div>
 </div>
@@ -132,32 +136,156 @@ printf("Soco mais forte: %d\n", socos[3]); // 130
 int players[50];
 double energy[50];
 ```
+---
+
+# 🧮 Inicialização automática de vectores
+
+
+* **Apenas** pode ser feita no momento da **declaração**. É possível inicializar automaticamente todos os elementos de um vector
+
+* `int var[5] = {10, 15, 18, 20, 25};`
+
+
+* **Apenas** no momento da declaração, o número de elementos pode ser omitido:
+
+* `int var[] = {10, 15, 18, 20, 25};`
+
+* O compilador percebe qual o tamanho necessário para o vector, neste caso 5.
 
 ---
 
+# 🧮 Inicialização automática de vectores
 
 
-# 🔄 Percorrer um Vector
+* 💡 Se indicarmos o **número de elementos**, mas **não inicializarmos todos**, os restantes são inicializados automaticamente com o valor **0**.
 
-* São indexados a partir da posição 0, até à posição n-1 (sendo n o número de elementos).
+* `int var[5] = {10, 15};`
 
-* Usamos um **ciclo `for`** para iterar pelos elementos:
+<small>
 
-```c
-for (int i = 0; i < 5; i++) {
-    printf("Soco[%d]: %d\n", i, socos[i]);
-}
-```
+| indice | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| conteudo | 10 | 15 | 0 | 0| 0 |
+
+</small>
+
+<br>
 
 * 💡 **Dica**: Para inicializar tudo com `0`, faz `int golpes[10] = {0};`
 
 ---
 
-# 🚀 Funções com Vectores
+# 🔄 Percorrer um Vector
 
-Passamos vectores para funções **sem precisar de especificar o tamanho**:
+<div class='grid'>
+<div>
 
 ```c
+#define DIM 5
+int golpes[DIM] = {50, 100, 20, 80, 15};
+```
+
+<div data-marpit-fragment>
+
+<small>
+
+| indice | conteúdo | variável |
+|---|---|---|
+| 0 | 50 | `golpes[0]` |
+| 1 | 100 | `golpes[1]`|
+| 2 | 20 | `golpes[2]`|
+| 3 | 80 | `golpes[3]`|
+| 4 | 15 | `golpes[4]`|
+
+</small>
+
+</div>
+
+* <small>São indexados a partir da posição 0, até à posição n-1 (sendo n o número de elementos).</small>
+
+</div>
+<div>
+
+* Usamos um **ciclo `for`** para iterar pelos elementos:
+
+<div data-marpit-fragment>
+
+```c
+for (int i = 0; i < DIM; i++)
+{
+    printf("Golpes[%d]: %d\n", i, golpes[i]);
+}
+```
+
+</div>
+</div>
+
+---
+# 🚀 Funções com Vectores
+
+* 📌 Em C **não interessa** a **dimensão** do vector que é passado como argumento de uma função. Apenas o seu tipo de dados.
+
+<div class='grid'>
+<div>
+
+<div data-marpit-fragment>
+
+```c
+void mostrar(int golpes[10]) {...}
+```
+</div>
+
+* equivale a:
+
+<div data-marpit-fragment>
+
+```c
+void mostrar(int golpes[20]) {...}
+```
+</div>
+
+* equivale a:
+
+<div data-marpit-fragment>
+
+```c
+void mostrar(int golpes[]) {...}
+```
+
+</div>
+
+</div>
+<div>
+
+* 🤔🤔Então, como é que sabemos o tamanho do vector dentro da função?
+
+* **R: temos** de passar um argumento extra com o tamanho do vector:
+
+<div data-marpit-fragment>
+
+```c
+void mostrar(int golpes[], int tamanho) {...}
+```
+
+</div>
+
+
+⛔ **Problema**: `sizeof(golpes)` dentro da função NÃO devolve o tamanho correto! 😱
+
+
+</div>
+
+
+---
+
+# 🚀 Funções com Vectores (exemplo)
+
+<div data-marpit-fragment>
+
+```c
+#include <stdio.h>
+#define DIM 5
+
 void mostrar(int golpes[], int tamanho) {
     for (int i = 0; i < tamanho; i++) {
         printf("Golpe %d: %d\n", i, golpes[i]);
@@ -165,13 +293,21 @@ void mostrar(int golpes[], int tamanho) {
 }
 ```
 
-**Chamada**:
+</div>
+
+<div data-marpit-fragment>
+
 ```c
-int socos[5] = {80, 95, 110, 120, 100};
-mostrar(socos, 5);
+int main()
+{
+  int golpes[DIM] = {80, 95, 110, 120, 100};
+  mostrar(socos, DIM);
+  return 0;
+}
 ```
 
-⛔ **Problema**: `sizeof(golpes)` dentro da função NÃO devolve o tamanho correto! 😱
+</div>
+
 
 ---
 
