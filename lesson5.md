@@ -308,6 +308,119 @@ int main()
 
 </div>
 
+---
+
+## ⚠️ Retorno de Vectores em Funções ⚠️
+
+* 📌 **Vectores criados dentro de uma função não podem ser retornados.**
+* 📌 **A memória do vector local é desalocada ao sair da função!**
+
+```c
+int* criarArray()
+{
+  int asneira_suprema[5] = {1, 2, 3, 4, 5};
+
+  return asneira_suprema; // ❌ ERRO: Retorna memória inválida
+}
+```
+
+
+✅ **Solução:** existe, mas vamos ver mais à frente...
+
+---
+
+## 📏 O Operador `sizeof`
+
+* 📌 **Usado para obter o tamanho (em bytes) de um tipo ou variável.**
+* 📌 **Retorna um valor do tipo `size_t`.** (basicamente é um inteiro)
+* 📌 **Sintaxe:**
+
+<div data-marpit-fragment>
+
+```c
+sizeof(tipo)
+sizeof(variável)
+```
+
+</div>
+
+---
+
+### 📏 O Operador `sizeof`: Como Funciona?
+
+<div data-marpit-fragment>
+
+```c
+   int a;
+   printf("Tamanho de int: %lu bytes\n", sizeof(int));
+   printf("Tamanho de a: %lu bytes\n", sizeof(a));
+```
+
+</div>
+
+* ✅ Ambas as chamadas retornam o tamanho de um `int`, mas a primeira usa o nome do tipo e a segunda usa uma variável.
+
+---
+
+### 📊 Tamanhos Comuns de Tipos Primitivos
+
+| Tipo        | Tamanho (pode variar) |
+|------------|---------------------|
+| `char`     | 1 byte               |
+| `int`      | 4 bytes              |
+| `float`    | 4 bytes              |
+| `double`   | 8 bytes              |
+| `long`     | 4 ou 8 bytes         |
+| `short`    | 2 bytes              |
+
+⚠️ **Os tamanhos podem variar dependendo do sistema e compilador!**
+
+---
+
+### 🔄 `sizeof` com Vectores
+
+```c
+int vector[10];
+
+printf("Tamanho do vector: %lu bytes\n", sizeof(vector));
+
+printf("Tamanho de um elemento: %lu bytes\n", sizeof(vector[0]));
+
+printf("Número de elementos: %lu\n", sizeof(vector) / sizeof(vector[0]));
+```
+
+* ✅ `sizeof(vector)` retorna o tamanho total do array em bytes.  
+* ✅ Para obter o número de elementos, dividimos pelo tamanho de um único elemento.
+
+---
+
+### ⚠️ `sizeof` em Vectores dentro de Funções
+
+<small>
+
+* 📌 **Não é possível obter o tamanho real do vetor passado como argumento para uma função.** ❌
+
+
+
+```c
+void tamanhoArray(int v[]) {
+  printf("Tamanho dentro da função: %lu bytes\n", sizeof(v));
+}
+
+int main() {
+  int arr[10];
+  printf("Tamanho no main: %lu bytes\n", sizeof(arr));
+  tamanhoArray(arr);
+  return 0;
+}
+```
+
+
+
+* ✅ No `main()`, `sizeof(arr)` retorna o tamanho correto.  
+* ❌ Dentro da função, `sizeof(arr)` retorna o tamanho de um ponteiro, **não do vector** 😱😱😭.
+
+</small>
 
 ---
 
