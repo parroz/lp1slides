@@ -66,7 +66,6 @@ _“Anyone who attempts to generate random numbers by deterministic means is, of
 - **Vectores**: Como guardar vários valores do mesmo tipo
 - **Strings**: Cadeias de caracteres terminadas em `\0`
 - **Matrizes**: Tabelas de valores (vectores de vectores)
-- **Funções úteis** para manipular tudo isso
 
 ---
 <div class='grid'>
@@ -132,10 +131,34 @@ printf("Soco mais forte: %d\n", socos[3]); // 130
 
 * **Exemplos:**
 
+<div class='grid'>
+<div>
+
+<div data-marpit-fragment>
+
 ```c
 int players[50];
 double energy[50];
 ```
+
+</div>
+
+</div>
+<div>
+
+<div data-marpit-fragment>
+
+```c
+#define DIM 100
+char letters[DIM];
+unsigned short ids[2*DIM+2];
+```
+
+</div>
+
+</div>
+</div>
+
 ---
 
 # 🧮 Inicialização automática de vectores
@@ -159,17 +182,28 @@ double energy[50];
 
 * 💡 Se indicarmos o **número de elementos**, mas **não inicializarmos todos**, os restantes são inicializados automaticamente com o valor **0**.
 
+<div class='grid'><div>
+
 * `int var[5] = {10, 15};`
+
+</div><div>
+
+<div data-marpit-fragment>
 
 <small>
 
 | indice | 0 | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|---|
-| conteudo | 10 | 15 | 0 | 0| 0 |
+| `var` | 10 | 15 | 0 | 0| 0 |
 
 </small>
 
+</div>
+
+</div></div>
+
 <br>
+
 
 * 💡 **Dica**: Para inicializar tudo com `0`, faz `int golpes[10] = {0};`
 
@@ -225,8 +259,7 @@ for (int i = 0; i < DIM; i++)
 
 * 📌 Em C **não interessa** a **dimensão** do vector que é passado como argumento de uma função. Apenas o seu tipo de dados.
 
-<div class='grid'>
-<div>
+<div class='grid'><div>
 
 <div data-marpit-fragment>
 
@@ -242,6 +275,7 @@ void mostrar(int golpes[10]) {...}
 ```c
 void mostrar(int golpes[20]) {...}
 ```
+
 </div>
 
 * equivale a:
@@ -254,8 +288,7 @@ void mostrar(int golpes[]) {...}
 
 </div>
 
-</div>
-<div>
+</div><div>
 
 * 🤔🤔Então, como é que sabemos o tamanho do vector dentro da função?
 
@@ -270,11 +303,10 @@ void mostrar(int golpes[], int tamanho) {...}
 </div>
 
 
-⛔ **Problema**: `sizeof(golpes)` dentro da função NÃO devolve o tamanho correto! 😱
+* ⛔ **Problema**: `sizeof(golpes)` dentro da função NÃO devolve o tamanho correto! 😱
 
 
-</div>
-
+</div></div>
 
 ---
 
@@ -307,6 +339,171 @@ int main()
 ```
 
 </div>
+
+---
+
+# 🔄 Vetores como Parâmetros de Função
+
+* 📌 **Em C, os vetores são passados por referência para funções.**
+* 📌 **Isso significa que qualquer alteração dentro da função afeta o vetor original.**
+
+* ✅ **Exemplo: Modificando um vetor dentro de uma função**
+
+<div class='grid'><div>
+
+<div data-marpit-fragment>
+
+```c
+#include <stdio.h>
+
+void modificar(int v[], int tamanho) {
+  for (int i = 0; i < tamanho; i++) {
+    v[i] *= 2; // Dobra cada elemento
+  }
+}
+```
+
+</div>
+
+</div><div>
+
+<div data-marpit-fragment>
+
+```c
+int main() {
+  int valores[] = {1, 2, 3, 4, 5};
+  int n = 5;
+
+  modificar(valores, n);
+
+  for (int i = 0; i < n; i++) {
+    printf("%d ", valores[i]); // Imprime: 2 4 6 8 10
+  }
+  return 0;
+}
+```
+
+</div>
+
+</div></div>
+
+✅ **O vetor `valores` foi modificado dentro da função `modificar()`!**
+
+---
+
+# ⚠️ Vetores vs. Variáveis Comuns
+
+* 📌 **Comparação entre variáveis comuns e vetores passados para funções:**
+
+<div class='grid'><div>
+
+
+* ✅ **Variável comum (cópia, não afeta a original):**
+   
+<div data-marpit-fragment>
+
+```c
+void alterar(int x) {
+  x = 10;
+}
+
+int main() {
+  int a = 5;
+  alterar(a);
+  printf("%d\n", a); // Imprime 5 (valor não alterado)
+}
+```
+
+</div>
+
+</div><div>
+
+* ✅ **Vetor (modifica o original, pois é passado por referência):**
+
+```c
+void alterarVetor(int v[]) {
+  v[0] = 99;
+}
+
+int main() {
+  int arr[] = {1, 2, 3};
+  alterarVetor(arr);
+  printf("%d\n", arr[0]); // Imprime 99 (valor foi alterado)
+}
+```
+
+</div>
+
+</div></div>
+
+* ⚠️ **Vetores são sempre passados como referência, enquanto variáveis comuns são passadas por valor.**  
+
+---
+
+## 📏 **VLAs (Variable Length Arrays) em C**
+
+* São **vectores com tamanho variável determinado em tempo de execução**.
+* Introduzidos no **C99**, mas **removidos no C++ e desaconselhados no C11**.
+
+* ⛔️⛔️ **A sua utilização é proíbida nesta disciplina**
+
+* ✅ **Exemplo de um VLA:**
+
+<div class='grid'><div>
+
+<div data-marpit-fragment>
+
+```c
+#include <stdio.h>
+
+void criarVetor(int n) {
+  int v[n];  // VLA (tamanho definido em tempo de execução)
+  for (int i = 0; i < n; i++) {
+    v[i] = i * 2;
+    printf("%d ", v[i]);
+  }
+}
+```
+
+</div>
+
+<small>
+
+⚠️ **O tamanho do vetor `v[n]` só é conhecido em tempo de execução.**
+
+</small>
+
+</div><div>
+
+<div data-marpit-fragment>
+
+```c
+int main() {
+  int tamanho;
+  printf("Digite um tamanho: ");
+  scanf("%d", &tamanho);
+
+  criarVetor(tamanho);
+  return 0;
+}
+```
+
+</div>
+
+</div></div>
+
+
+
+---
+
+# ❌ **Por que evitar VLAs?**
+
+* ❌ **Sem alocação dinâmica eficiente:** Usa **stack**, o que pode causar **stack overflow**.  
+❌ **Baixa portabilidade:** Não é suportado por todos os compiladores C.  
+❌ **C11 tornou o suporte opcional:** Muitos compiladores como **MSVC** não aceitam VLAs.  
+❌ **Impossível verificar o tamanho em tempo de compilação**.
+
+✅ Veremos **Alternativas** mais à frente.
 
 ---
 
@@ -424,121 +621,187 @@ int main() {
 
 ---
 
-# 📝 Strings: Cadeias de Caracteres
+## ❓  Quizz - Vectores
 
-- Uma string é um **vector de `char`** terminado com `\0`.
-- Algumas formas de declarar strings:
+<br>
 
-```c
-char nome[10] = "Rocky";
-char nome[] = { 'R', 'o', 'c', 'k', 'y', '\0' };
-char *nome = "Rocky"; // Ponteiro para string
-```
+![w:200 center](socrative.png)
 
-💡 **Lembra-te**: Se não houver `\0`, **o C não sabe** onde a string termina! 🚨
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
+
 
 ---
 
-# ⛔ Problemas comuns com Strings
 
-### ❌ Erro 1: Atribuição inválida
+
+# 🗞️ Strings - cadeias de caracteres
+
+---
+
+# 📜 Cadeias de Caracteres (Strings) em C
+
+* Strings em C são **vetores de caracteres** terminados pelo caractere especial `\0` (caractere nulo).
+* Devemos sempre reservar espaço para o caractere `\0` ao declarar uma string.
+
+```c
+char nome[10]; // Permite até 9 caracteres + '\0'
+```
+
+---
+
+# 📌 Declaração e Inicialização de Strings
+
+```c
+char nome[20] = "oscar";
+  
+char nome[20] = {'o','s','c','a','r', '\0'};
+  
+char nome[] = "oscar";  // O compilador define o tamanho automaticamente. Incluindo espaço para o \0
+  
+char *nome = "oscar";
+```
+
+⚠️ O `\0` deve ser sempre considerado, pois indica o fim da string.
+
+---
+
+# ❌ O que **não** podemos fazer com strings em C
+
 ```c
 char nome[10];
-nome = "Bruce Lee"; // ❌ NÃO PODES FAZER ISTO!
-```
-Usa `strcpy`:
-```c
-strcpy(nome, "Bruce Lee"); // ✅ Correto!
+nome = "Alberto Caeiro";  // ❌ ERRO! Strings não podem ser atribuídas diretamente
 ```
 
-### ❌ Erro 2: Comparação errada
 ```c
-if (nome == "Bruce Lee") // ❌ NÃO FAZ O QUE PENSA!
-```
-Usa `strcmp`:
-```c
-if (strcmp(nome, "Bruce Lee") == 0) // ✅ Correto!
-```
-
----
-
-# 🔥 Funções úteis para Strings (`string.h`)
-
-```c
-strcpy(destino, origem);  // Copia strings
-strcat(nome, apelido);    // Concatena strings
-strlen(nome);             // Retorna o tamanho
-strcmp(a, b);             // Compara strings
-```
-
-📌 **Dica**: Usa `strncmp(a, b, n)` para comparar apenas `n` caracteres!
-
----
-
-# 📊 Matrizes: Vectores de Vectores
-
-- Uma matriz é um **vector de vectores**.
-- Em C, declaramos assim:
-
-```c
-int socos[2][3] = { 
-    {100, 120, 110}, // Linha 0
-    {90,  130, 105}  // Linha 1
-};
-```
-
-📌 **Dica**: A primeira dimensão é **linhas**, a segunda é **colunas**.
-
----
-
-# 🔄 Percorrer Matrizes
-
-```c
-for (int i = 0; i < 2; i++) {
-    for (int j = 0; j < 3; j++) {
-        printf("Soco[%d][%d]: %d\n", i, j, socos[i][j]);
-    }
+if (nome == "Alberto Caeiro") {  // ❌ ERRO! Não se pode comparar strings com ==
+  puts("asneira suprema");
 }
 ```
 
-💡 **Dica**: Para melhor eficiência, percorre **linha a linha**!
+* ✅ **Correção:** Use funções da biblioteca `<string.h>`.
 
 ---
 
-# 🔥 Matrizes em Funções
+# 📦 Operações com Strings (`<string.h>`)
+
+* **Cópia de Strings**
 
 ```c
-void mostrar(int socos[][3], int linhas) {
-    for (int i = 0; i < linhas; i++) {
-        for (int j = 0; j < 3; j++) {
-            printf("%d ", socos[i][j]);
-        }
-        printf("\n");
-    }
+strcpy(nome, "Alberto");
+```
+
+* **Concatenação de Strings**
+
+```c
+strcat(nome, " Caeiro");
+```
+
+* **Comparação de Strings**
+
+```c
+if (strcmp(nome, "Alberto Caeiro") == 0)
+  puts("sou um guardador de rebanhos");
+```
+
+* `strcpy` retorna 0 se as strings forem iguais
+
+---
+
+# 🏷️ Comprimento de uma String
+
+```c
+int n = strlen(nome);
+
+printf("A string tem %d caracteres", n);
+```
+
+* ⚠️ `strlen()` retorna apenas o número de caracteres **antes** do `\0`.
+
+---
+
+# ⚙️ Implementação de `strcat`
+
+```c
+char *strcat(char s1[], char s2[]) {
+  int ls1 = strlen(s1);
+  int ls2 = strlen(s2);
+
+  for (int i = ls1, j = 0; j <= ls2; i++, j++)
+    s1[i] = s2[j];
+
+  return s1;
 }
 ```
 
-📌 **Dica**: TEMOS de especificar o número de colunas ao passar matrizes para funções! 🚨
+* ✅ Concatena `s2` ao final de `s1`.
+* ✅ O `\0` da `s2` é copiado para `s1`.
 
 ---
 
-# 🚀 Exercício Rápido
+# 📢 Exercícios - Válido ou Inválido?
 
-Qual é a saída do seguinte código?
 ```c
-char s[] = "Use_the_force_Luke";
-s[11] = '\0';
-printf("%s\n", s);
+char palavra[100];
+palavra = "TRUE"; // ❌ Inválido! Use strcpy()
+
+if (palavra == "TRUE") // ❌ Inválido! Use strcmp()
+  puts("It is TRUE!");
 ```
 
-a) `Use_the_force_Luke`
-b) `Use_the_for`
-c) `Use_the_fo`
-d) `Use_the_force`
+✅ **Correção:**
 
-e) Nenhuma das anteriores
+```c
+strcpy(palavra, "TRUE");
 
-_(Resposta no próximo slide!)_
+if (strcmp(palavra, "TRUE") == 0)
+  puts("It is TRUE!");
+```
+
+---
+
+# 📢 Exercício - O que será impresso?
+
+<div class='grid'>
+<div>
+
+
+```c
+#include <stdio.h>
+#define MAX 64
+void func(char s[], int n) {
+  puts(s);
+  s[n] = '\0';
+  puts(s);
+}
+
+int main(void) {
+  char s[MAX] = "Use_the_force_Luke";
+  func(s, 11);
+  return 0;
+}
+```
+
+</div>
+<div>
+
+<small>
+
+(A) `Use_the_force_Luke\n`  `Use_the_for\n`  
+(B) `Use_the_force_Luke\n`  `Use_the_fo\n`  
+(C) `Use_the_force_Luke\n`  `Use_the_forc\n`  
+(D) `Use_the_force_Luke\n`  `rce_Luke\n`  
+(E) Nenhuma das anteriores
+
+Nota: a função `puts()` imprime a string recebida como parâmetro seguida de um `\n`
+
+</small>
+
+</div>
+</div>
 
 ---
 
@@ -550,22 +813,369 @@ Explicação:
 - `s[11] = '\0';` corta a string após **`Use_the_for`**.
 - O resto da memória **ainda contém os caracteres antigos**, mas a string **termina no `\0`!**
 
----
-
-# 🎯 Recapitulando
-
-✅ Vectores são **listas de elementos** do mesmo tipo.
-✅ Strings são **vectores de `char`** terminados em `\0`.
-✅ Matrizes são **vectores de vectores**.
-✅ `string.h` tem funções úteis como `strcpy`, `strlen`, `strcmp`.
-✅ Cuidado com comparações (`==` NÃO funciona com strings!).
-
-🎉 **Parabéns, chegaste ao fim!** 🚀
-
-
-
 
 ---
+
+# 📌 `printf()` com Strings
+
+```c
+printf("%s\n", var);  // Imprime a string normalmente
+
+printf("%10s\n", var); // Alinha à direita com espaço mínimo de 10 caracteres
+
+printf("%-10s\n", var); // Alinha à esquerda
+
+puts(var); // Similar ao printf("%s\n", var)
+```
+
+✅ `puts()` sempre adiciona `\n` no final.
+
+---
+
+# 📌 `scanf()` com Strings
+
+```c
+scanf("%s", nome);  // Lê até encontrar espaço ou \n
+scanf("%5s", nome);  // Lê até 5 caracteres
+
+scanf("%[^\n]s", nome); // Lê até \n
+
+fgets(nome, 128, stdin); // Alternativa segura
+```
+
+⚠️ `scanf("%s", nome);` **não usa `&`**
+
+---
+
+# 🎭 Converter para Maiúsculas
+
+```c
+#include <ctype.h>
+void str_to_upper(char str[]) {
+  for (int i = 0 ; str[i] != '\0' ; i++)
+    str[i] = toupper(str[i]);
+}
+
+int main() {
+  char fish[100] = "halibut";
+  str_to_upper(fish);
+  printf("%s\n", fish); // Imprime "HALIBUT"
+}
+```
+
+✅ Usa `<ctype.h>` para manipulação de caracteres.
+
+---
+
+# 📝 Implementação de `strcpy`
+
+```c
+void str_copy(char dest[], char src[]) {
+  int i = 0;
+  do {
+    dest[i] = src[i];
+  } while (src[i++] != '\0');
+}
+```
+
+✅ Alternativa compacta:
+
+```c
+void str_copy(char dest[], char src[]) {
+  while ((dest[i] = src[i++]) != '\0');
+}
+```
+
+
+
+---
+
+# 📚 Biblioteca `<string.h>`
+## 🔥 Funções úteis para Strings
+
+```c
+strcpy(destino, origem);  // Copia strings
+strcat(nome, apelido);    // Concatena strings
+strlen(nome);             // Retorna o tamanho
+strcmp(a, b);             // Compara strings
+strcasecmp(s1, s2);       // Compara strings ignorando o 'case'
+strncmp(a, b, n)          // comparar apenas `n` caracteres!
+```
+
+---
+
+# 🎯 Resumo
+
+✅ Strings em C são vetores terminados em `\0`.  
+✅ Use `<string.h>` para manipular strings corretamente.  
+✅ **Não** compare strings com `==`, use `strcmp()`.  
+✅ `printf()` e `scanf()` têm formatos especiais para strings.  
+✅ **Cuidado com buffer overflow** ao lidar com strings!
+
+
+---
+
+# 📊 Matrizes
+
+---
+
+## 📊 Matrizes: Vectores de Vectores
+
+* Uma **matriz** é um **vetor multidimensional**, i.e. **vector de vectores**
+* São declaradas com **duas dimensões ou mais**.
+
+* Em C, declaramos assim:
+
+```c
+int socos[2][3] = { 
+  {100, 120, 110}, // Linha 0
+  {90,  130, 105}  // Linha 1
+};
+```
+
+📌 **Dica**: A primeira dimensão é **linhas**, a segunda é **colunas**.
+
+---
+
+# 🏗️ Estrutura de Matrizes
+
+* **Primeira dimensão** → Número de **linhas**  
+* **Segunda dimensão** → Número de **colunas**  
+
+```c
+tipo nome_matriz[num_linhas][num_colunas];
+```
+
+✅ Exemplo:
+
+```c
+char Galo[3][3]; // Matriz 3x3
+Galo[0][0] = 'X';
+Galo[0][2] = 'O';
+Galo[1][1] = 'X';
+Galo[2][2] = 'O';
+```
+
+✅ `Galo[2][2]` armazena `'O'`.
+
+---
+
+
+# 🔄 Percorrer Matrizes
+
+💡 **Dica**: percorre **linha a linha**!
+
+```c
+for (int i = 0; i < 2; i++) {
+  for (int j = 0; j < 3; j++) {
+    printf("Soco[%d][%d]: %d\n", i, j, socos[i][j]);
+  }
+}
+```
+
+
+---
+
+# 🔥 Matrizes em Funções
+
+```c
+void mostrar(int socos[][3], int linhas) {
+  for (int i = 0; i < linhas; i++) {
+    for (int j = 0; j < 3; j++) {
+      printf("%d ", socos[i][j]);
+    }
+    printf("\n");
+  }
+}
+```
+
+📌 **Dica**: TEMOS de especificar o número de colunas ao passar matrizes para funções! 🚨
+
+---
+
+# 🚀 Inicialização Automática
+
+<div class='grid'>
+<div>
+
+* **Podemos inicializar uma matriz no momento da declaração**:
+
+   ```c
+   char soup[5][5] = {
+       {'f', 'e', 'k', 'u', 'l'},
+       {'u', 'o', 'x', 's', 'n'},
+       {'t', 'n', 'r', 'e', 'r'},
+       {'y', 'h', 'e', 'c', 'j'},
+       {'v', 'q', 'e', 'w', 'e'}
+   };
+   ```
+
+</div>
+<div>
+
+✅ **Podemos omitir o número de linhas** (o compilador infere):
+
+   ```c
+   char soup[][5] = {
+       {'e', 'e', 'k', 'u', 'l'},
+       {'u', 'c', 'x', 'q', 'n'},
+       {'t', 's', 'r', 'd', 'r'},
+       {'y', 'h', 'e', 'o', 'j'},
+       {'v', 'q', 'e', 'w', 'f'}
+   };
+   ```
+
+⚠️ **Não podemos omitir o número de colunas**!
+
+</div>
+</div>
+
+---
+
+# 🔍 Acesso a Elementos
+
+* Podemos **acessar e modificar** elementos da matriz:
+
+```c
+char soup[5][5];
+soup[0][0] = 'e';
+soup[0][1] = 'e';
+soup[0][2] = 'u';
+soup[0][3] = 'l';
+soup[1][0] = 'u';
+```
+
+✅ Cada elemento é referenciado como `matriz[linha][coluna]`.
+
+---
+
+# ⚠️ Erro Comum: Dimensão Inválida
+
+🚨 O seguinte código **não compila**:
+
+```c
+int scores[3][] = {  // ❌ ERRO: Deve especificar o número de colunas
+  {'1', '2', '3'},
+  {'4', '5', '6'},
+  {'7', '8', '9'}
+};
+```
+
+✅ **Correção:** Sempre defina o número de colunas:
+
+```c
+int scores[3][3] = {
+  {'1', '2', '3'},
+  {'4', '5', '6'},
+  {'7', '8', '9'}
+};
+```
+
+---
+
+# 🎯 Exercício: Qual é o erro?
+
+📌 **O código abaixo não funciona corretamente. Por quê?**
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       int n = 3, i, j;
+       int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+       int acc[n]; // Vetor para armazenar a soma das linhas
+
+       for (i = 0; i < 3; i++) {
+           for (j = 0; j <= 3; j++) {  // ❌ ERRO
+               acc[i] += scores[j][i]; // ❌ ERRO
+           }
+       }
+       return 0;
+   }
+   ```
+
+✅ **Pense antes de executar!**
+
+---
+
+# 📤 Passagem de Matrizes para Funções
+
+* **Devemos especificar o número de colunas ao passar uma matriz para uma função**:
+
+   ```c
+   #define DIM 5
+   void inic(char s[][DIM]) {
+       s[0][0] = 'e';
+       s[0][1] = 'e';
+       s[0][2] = 'u';
+       s[0][3] = 'l';
+   }
+   ```
+
+✅ **No `main()`**:
+
+   ```c
+   int main(void) {
+       char soup[5][5];
+       inic(soup);
+       return 0;
+   }
+   ```
+
+---
+
+# 🔄 Percorrendo uma Matriz
+
+✅ **Para percorrer uma matriz, usamos dois loops aninhados**:
+
+   ```c
+   for (i = 0; i < 4; i++) {
+       for (j = 0; j < 4; j++) {
+           printf("%d ", matriz[i][j]);
+       }
+       printf("\n");
+   }
+   ```
+
+🔹 **Primeiro loop** percorre as linhas.  
+🔹 **Segundo loop** percorre as colunas.
+
+---
+
+# 🔄 Exemplo: Percorrendo e Imprimindo uma Matriz
+
+   ```c
+   int main(void) {
+       char soup[][5] = {
+           {'e', 'e', 'k', 'u', 'l'},
+           {'u', 'c', 'x', 'q', 'n'},
+           {'t', 's', 'r', 'd', 'r'},
+           {'y', 'h', 'e', 'o', 'j'},
+           {'v', 'q', 'e', 'w', 'f'}
+       };
+
+       for (int i = 0; i < 5; i++) {
+           for (int j = 0; j < 5; j++)
+               printf("'%c' ", soup[i][j]);
+           putchar('\n');
+       }
+   }
+   ```
+
+✅ **Imprime todos os elementos da matriz `soup`**.
+
+---
+
+# 📚 Resumo
+
+✅ **Matrizes são vetores multidimensionais**.  
+✅ **Devemos especificar o número de colunas ao declarar uma matriz**.  
+✅ **Podemos inicializar uma matriz na declaração**.  
+✅ **Para percorrer uma matriz, usamos dois loops aninhados**.  
+✅ **Sempre defina o número de colunas ao passar uma matriz para uma função**.
+
+---
+
 
 ## ❓  Quizz
 
