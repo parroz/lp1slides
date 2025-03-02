@@ -492,11 +492,9 @@ int main() {
 
 </div></div>
 
-
-
 ---
 
-# ❌ **Por que evitar VLAs?**
+## ❌ **Por que evitar VLAs?**
 
 * ❌ **Sem alocação dinâmica eficiente:** Usa **stack**, o que pode causar **stack overflow**.  
 ❌ **Baixa portabilidade:** Não é suportado por todos os compiladores C.  
@@ -548,9 +546,9 @@ sizeof(variável)
 <div data-marpit-fragment>
 
 ```c
-   int a;
-   printf("Tamanho de int: %lu bytes\n", sizeof(int));
-   printf("Tamanho de a: %lu bytes\n", sizeof(a));
+int a;
+printf("Tamanho de int: %lu bytes\n", sizeof(int));
+printf("Tamanho de a: %lu bytes\n", sizeof(a));
 ```
 
 </div>
@@ -659,30 +657,45 @@ char nome[10]; // Permite até 9 caracteres + '\0'
 char nome[20] = "oscar";
   
 char nome[20] = {'o','s','c','a','r', '\0'};
-  
-char nome[] = "oscar";  // O compilador define o tamanho automaticamente. Incluindo espaço para o \0
-  
-char *nome = "oscar";
+
+char nome[] = "oscar"; 
+// O compilador define o tamanho automaticamente. Incluindo espaço para o \0
+
+char *nome = "oscar"; 
 ```
 
-⚠️ O `\0` deve ser sempre considerado, pois indica o fim da string.
+* ⚠️ O `\0` deve ser sempre considerado, pois indica o fim da string.
+
 
 ---
 
 # ❌ O que **não** podemos fazer com strings em C
 
+<small>
+
+* ❌ **Atribuição:**
 ```c
 char nome[10];
 nome = "Alberto Caeiro";  // ❌ ERRO! Strings não podem ser atribuídas diretamente
 ```
+
+* ❌ **Comparação:**
 
 ```c
 if (nome == "Alberto Caeiro") {  // ❌ ERRO! Não se pode comparar strings com ==
   puts("asneira suprema");
 }
 ```
+* ❌ **Retorno:**
+```c
+char * asneira(void) {  
+  char s1[] = "think twice...";
+  return s1; // ❌ ERRO! Não se pode retornar vectores locais
+}
+```
 
-* ✅ **Correção:** Use funções da biblioteca `<string.h>`.
+</small>
+
 
 ---
 
@@ -894,12 +907,13 @@ void str_copy(char dest[], char src[]) {
 ## 🔥 Funções úteis para Strings
 
 ```c
-strcpy(destino, origem);  // Copia strings
-strcat(nome, apelido);    // Concatena strings
-strlen(nome);             // Retorna o tamanho
-strcmp(a, b);             // Compara strings
-strcasecmp(s1, s2);       // Compara strings ignorando o 'case'
-strncmp(a, b, n)          // comparar apenas `n` caracteres!
+strcpy(char *dest, char *src);  // Copia strings
+strcat(char *s1, char *s2);    // Concatena strings (resultado em s1)
+strlen(char * s);             // Retorna o tamanho
+strcmp(char * s1, char * s2);             // Compara strings
+strcasecmp(char * s1, char * s2);       // Compara strings ignorando o 'case'
+strncmp(char * s1, char * s2, int n)          // comparar apenas `n` caracteres!
+_stricmp(char *dest, char *src) // compara strings - compilados para Windows
 ```
 
 ---
@@ -911,6 +925,21 @@ strncmp(a, b, n)          // comparar apenas `n` caracteres!
 ✅ **Não** compare strings com `==`, use `strcmp()`.  
 ✅ `printf()` e `scanf()` têm formatos especiais para strings.  
 ✅ **Cuidado com buffer overflow** ao lidar com strings!
+
+---
+
+## ❓  Quizz - Strings
+
+<br>
+
+![w:200 center](socrative.png)
+
+
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
+
 
 
 ---
@@ -1000,32 +1029,38 @@ void mostrar(int socos[][3], int linhas) {
 
 * **Podemos inicializar uma matriz no momento da declaração**:
 
-   ```c
-   char soup[5][5] = {
-       {'f', 'e', 'k', 'u', 'l'},
-       {'u', 'o', 'x', 's', 'n'},
-       {'t', 'n', 'r', 'e', 'r'},
-       {'y', 'h', 'e', 'c', 'j'},
-       {'v', 'q', 'e', 'w', 'e'}
-   };
-   ```
+<div data-marpit-fragment>
 
+```c
+char soup[5][5] = {
+  {'f', 'e', 'k', 'u', 'l'},
+  {'u', 'o', 'x', 's', 'n'},
+  {'t', 'n', 'r', 'e', 'r'},
+  {'y', 'h', 'e', 'c', 'j'},
+  {'v', 'q', 'e', 'w', 'e'}
+};
+```
+</div>
 </div>
 <div>
 
-✅ **Podemos omitir o número de linhas** (o compilador infere):
+* ✅ **Podemos omitir o número de linhas** (o compilador infere):
 
-   ```c
-   char soup[][5] = {
-       {'e', 'e', 'k', 'u', 'l'},
-       {'u', 'c', 'x', 'q', 'n'},
-       {'t', 's', 'r', 'd', 'r'},
-       {'y', 'h', 'e', 'o', 'j'},
-       {'v', 'q', 'e', 'w', 'f'}
-   };
-   ```
+<div data-marpit-fragment>
+   
+```c
+char soup[][5] = {
+  {'e', 'e', 'k', 'u', 'l'},
+  {'u', 'c', 'x', 'q', 'n'},
+  {'t', 's', 'r', 'd', 'r'},
+  {'y', 'h', 'e', 'o', 'j'},
+  {'v', 'q', 'e', 'w', 'f'}
+};
+```
 
-⚠️ **Não podemos omitir o número de colunas**!
+</div>
+
+* ⚠️ **Não podemos omitir o número de colunas**!
 
 </div>
 </div>
@@ -1036,6 +1071,8 @@ void mostrar(int socos[][3], int linhas) {
 
 * Podemos **acessar e modificar** elementos da matriz:
 
+<div data-marpit-fragment>
+
 ```c
 char soup[5][5];
 soup[0][0] = 'e';
@@ -1045,56 +1082,98 @@ soup[0][3] = 'l';
 soup[1][0] = 'u';
 ```
 
-✅ Cada elemento é referenciado como `matriz[linha][coluna]`.
+</div>
+
+* ✅ Cada elemento é referenciado como `matriz[linha][coluna]`.
 
 ---
 
 # ⚠️ Erro Comum: Dimensão Inválida
 
-🚨 O seguinte código **não compila**:
+* 🚨 O seguinte código **não compila**:
+
+<div data-marpit-fragment>
 
 ```c
-int scores[3][] = {  // ❌ ERRO: Deve especificar o número de colunas
+int scores[3][] = {
   {'1', '2', '3'},
   {'4', '5', '6'},
   {'7', '8', '9'}
 };
 ```
 
-✅ **Correção:** Sempre defina o número de colunas:
+</div>
 
-```c
-int scores[3][3] = {
-  {'1', '2', '3'},
-  {'4', '5', '6'},
-  {'7', '8', '9'}
-};
-```
+* ❌ ERRO: Deve especificar o número de colunas
+
 
 ---
 
-# 🎯 Exercício: Qual é o erro?
+## 🎯 Exercício: Qual é o erro?
 
 📌 **O código abaixo não funciona corretamente. Por quê?**
 
-   ```c
-   #include <stdio.h>
+```c
+int main() {
+  int n = 3, i, j;
+  int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  int acc[n]; // Vector para armazenar a soma das linhas
 
-   int main() {
-       int n = 3, i, j;
-       int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-       int acc[n]; // Vetor para armazenar a soma das linhas
+    for (i = 0; i < 3; i++) {
+      for (j = 0; j <= 3; j++) {
+        acc[i] += scores[j][i];
+      }
+    }
+  return 0;
+}
+```
 
-       for (i = 0; i < 3; i++) {
-           for (j = 0; j <= 3; j++) {  // ❌ ERRO
-               acc[i] += scores[j][i]; // ❌ ERRO
-           }
-       }
-       return 0;
-   }
-   ```
 
-✅ **Pense antes de executar!**
+---
+
+## 🎯 Exercício: Qual é o erro?
+
+📌 **O código abaixo não funciona corretamente. Por quê?**
+
+```c
+int main() {
+  int n = 3, i, j;
+  int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  int acc[n]; // ❌ ERRO: VLA. 
+
+    for (i = 0; i < 3; i++) {
+      for (j = 0; j <= 3; j++) {  // ❌ ERRO: iteracao vai até 3 inclusive
+        acc[i] += scores[j][i]; // ❌ ERRO: troca linhas por colunas
+      }
+    }
+  return 0;
+}
+```
+
+
+---
+
+## 🎯 Exercício: Qual é o erro?
+
+✅ **Correcção**
+
+```c
+#define DIM 3
+
+int main() {
+  int i, j;
+  int scores[][DIM] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  int acc[DIM]; 
+
+    for (i = 0; i < 3; i++) {
+      for (j = 0; j < 3; j++) {
+        acc[i] += scores[i][j];
+      }
+    }
+  return 0;
+}
+```
+
 
 ---
 
@@ -1116,7 +1195,7 @@ int scores[3][3] = {
 
    ```c
    int main(void) {
-       char soup[5][5];
+       char soup[DIM][DIM];
        inic(soup);
        return 0;
    }
@@ -1144,23 +1223,23 @@ int scores[3][3] = {
 
 # 🔄 Exemplo: Percorrendo e Imprimindo uma Matriz
 
-   ```c
-   int main(void) {
-       char soup[][5] = {
-           {'e', 'e', 'k', 'u', 'l'},
-           {'u', 'c', 'x', 'q', 'n'},
-           {'t', 's', 'r', 'd', 'r'},
-           {'y', 'h', 'e', 'o', 'j'},
-           {'v', 'q', 'e', 'w', 'f'}
-       };
+```c
+int main(void) {
+  char soup[][5] = {
+    {'e', 'e', 'k', 'u', 'l'},
+    {'u', 'c', 'x', 'q', 'n'},
+    {'t', 's', 'r', 'd', 'r'},
+    {'y', 'h', 'e', 'o', 'j'},
+    {'v', 'q', 'e', 'w', 'f'}
+  };
 
-       for (int i = 0; i < 5; i++) {
-           for (int j = 0; j < 5; j++)
-               printf("'%c' ", soup[i][j]);
-           putchar('\n');
-       }
-   }
-   ```
+  for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 5; j++)
+      printf("'%c' ", soup[i][j]);
+    putchar('\n');
+  }
+}
+```
 
 ✅ **Imprime todos os elementos da matriz `soup`**.
 
@@ -1177,14 +1256,17 @@ int scores[3][3] = {
 ---
 
 
-## ❓  Quizz
+## ❓  Quizz - Matrizes
 
-<br>
 <br>
 
 ![w:200 center](socrative.png)
 
 
+<br>
+
+
+- No campo nome devem colocar o **número de aluno** 2XXXXXXX.
 
 
 ---
