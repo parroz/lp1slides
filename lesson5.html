@@ -13,8 +13,7 @@
 
 <h1 id="%F0%9F%93%A2-linguagens-de-programa%C3%A7%C3%A3o-1"><img class="emoji" draggable="false" alt="📢" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e2.svg" data-marp-twemoji=""/> Linguagens de Programação 1</h1>
 <div data-marpit-fragment>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> aula = <span class="hljs-number">4</span>;
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\aAula #%d\n&quot;</span>, aula++ * <span class="hljs-number">2</span> / <span class="hljs-number">2</span>);
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\aAula #%d\n&quot;</span>, <span class="hljs-number">3</span> + ++<span class="hljs-number">4</span> / <span class="hljs-number">2</span>);
 </code></pre>
 </div>
 <h3 id="%F0%9F%92%AC-message-of-the-day"><img class="emoji" draggable="false" alt="💬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" data-marp-twemoji=""/> Message of the Day</h3>
@@ -357,7 +356,7 @@
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>
 {
   <span class="hljs-type">int</span> golpes[DIM] = {<span class="hljs-number">80</span>, <span class="hljs-number">95</span>, <span class="hljs-number">110</span>, <span class="hljs-number">120</span>, <span class="hljs-number">100</span>};
-  mostrar(socos, DIM);
+  mostrar(golpes, DIM);
   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
 </code></pre>
@@ -365,6 +364,117 @@
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="3" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h2 id="%F0%9F%93%8F-o-operador-sizeof"><img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cf.svg" data-marp-twemoji=""/> O Operador <code>sizeof</code></h2>
+<ul>
+<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Usado para obter o tamanho (em bytes) de um tipo ou variável.</strong></li>
+<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Retorna um valor do tipo <code>size_t</code>.</strong> (basicamente é um inteiro)</li>
+<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Sintaxe:</strong></li>
+</ul>
+<div data-marpit-fragment>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-keyword">sizeof</span>(tipo)
+<span class="hljs-keyword">sizeof</span>(variável)
+</code></pre>
+</div>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="1" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h3 id="%F0%9F%93%8F-o-operador-sizeof-como-funciona"><img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cf.svg" data-marp-twemoji=""/> O Operador <code>sizeof</code>: Como Funciona?</h3>
+<div data-marpit-fragment>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> a;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de int: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>));
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de a: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(a));
+</code></pre>
+</div>
+<ul>
+<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Ambas as chamadas retornam o tamanho de um <code>int</code>, mas a primeira usa o nome do tipo e a segunda usa uma variável.</li>
+</ul>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h3 id="%F0%9F%93%8A-tamanhos-comuns-de-tipos-primitivos"><img class="emoji" draggable="false" alt="📊" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ca.svg" data-marp-twemoji=""/> Tamanhos Comuns de Tipos Primitivos</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Tamanho (pode variar)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>1 byte</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4 bytes</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4 bytes</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8 bytes</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>4 ou 8 bytes</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2 bytes</td>
+</tr>
+</tbody>
+</table>
+<p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <strong>Os tamanhos podem variar dependendo do sistema e compilador!</strong></p>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h3 id="%F0%9F%94%84-sizeof-com-vectores"><img class="emoji" draggable="false" alt="🔄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f504.svg" data-marp-twemoji=""/> <code>sizeof</code> com Vectores</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> <span class="hljs-built_in">vector</span>[<span class="hljs-number">10</span>];
+
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho do vector: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>));
+
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de um elemento: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>[<span class="hljs-number">0</span>]));
+
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Número de elementos: %lu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>) / <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>[<span class="hljs-number">0</span>]));
+</code></pre>
+<ul>
+<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>sizeof(vector)</code> retorna o tamanho total do array em bytes.</li>
+<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Para obter o número de elementos, dividimos pelo tamanho de um único elemento.</li>
+</ul>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="3" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h3 id="%E2%9A%A0%EF%B8%8F-sizeof-em-vectores-dentro-de-fun%C3%A7%C3%B5es"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <code>sizeof</code> em Vectores dentro de Funções</h3>
+<small>
+<ul>
+<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Não é possível obter o tamanho real do vetor passado como argumento para uma função.</strong> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" data-marp-twemoji=""/></li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">tamanhoArray</span><span class="hljs-params">(<span class="hljs-type">int</span> v[])</span> {
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho dentro da função: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(v));
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+  <span class="hljs-type">int</span> arr[<span class="hljs-number">10</span>];
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho no main: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(arr));
+  tamanhoArray(arr);
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<ul>
+<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> No <code>main()</code>, <code>sizeof(arr)</code> retorna o tamanho correto.</li>
+<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" data-marp-twemoji=""/> Dentro da função, <code>sizeof(arr)</code> retorna o tamanho de um ponteiro, <strong>não do vector</strong> <img class="emoji" draggable="false" alt="😱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f631.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="😱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f631.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="😭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f62d.svg" data-marp-twemoji=""/>.</li>
+</ul>
+</small>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="16" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h1 id="%F0%9F%94%84-vetores-como-par%C3%A2metros-de-fun%C3%A7%C3%A3o"><img class="emoji" draggable="false" alt="🔄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f504.svg" data-marp-twemoji=""/> Vetores como Parâmetros de Função</h1>
 <ul>
@@ -408,7 +518,7 @@
 <p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>O vetor <code>valores</code> foi modificado dentro da função <code>modificar()</code>!</strong></p>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="4" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="4" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h1 id="%E2%9A%A0%EF%B8%8F-vetores-vs-vari%C3%A1veis-comuns"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> Vetores vs. Variáveis Comuns</h1>
 <ul>
@@ -451,7 +561,7 @@
 </ul>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="4" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="4" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h2 id="%F0%9F%93%8F-vlas-variable-length-arrays-em-c"><img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cf.svg" data-marp-twemoji=""/> <strong>VLAs (Variable Length Arrays) em C</strong></h2>
 <ul>
@@ -499,7 +609,7 @@
 </div></div>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="1" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="1" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h2 id="%E2%9D%8C-por-que-evitar-vlas"><img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" data-marp-twemoji=""/> <strong>Por que evitar VLAs?</strong></h2>
 <ul>
@@ -511,7 +621,7 @@
 <p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Veremos <strong>Alternativas</strong> mais à frente.</p>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="2" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="20" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h2 id="%E2%9A%A0%EF%B8%8F-retorno-de-vectores-em-fun%C3%A7%C3%B5es-%E2%9A%A0%EF%B8%8F"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> Retorno de Vectores em Funções <img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/></h2>
 <ul>
@@ -526,117 +636,6 @@
 }
 </code></pre>
 <p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>Solução:</strong> existe, mas vamos ver mais à frente...</p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="16" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h2 id="%F0%9F%93%8F-o-operador-sizeof"><img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cf.svg" data-marp-twemoji=""/> O Operador <code>sizeof</code></h2>
-<ul>
-<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Usado para obter o tamanho (em bytes) de um tipo ou variável.</strong></li>
-<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Retorna um valor do tipo <code>size_t</code>.</strong> (basicamente é um inteiro)</li>
-<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Sintaxe:</strong></li>
-</ul>
-<div data-marpit-fragment>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-keyword">sizeof</span>(tipo)
-<span class="hljs-keyword">sizeof</span>(variável)
-</code></pre>
-</div>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="1" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h3 id="%F0%9F%93%8F-o-operador-sizeof-como-funciona"><img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cf.svg" data-marp-twemoji=""/> O Operador <code>sizeof</code>: Como Funciona?</h3>
-<div data-marpit-fragment>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> a;
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de int: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>));
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de a: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(a));
-</code></pre>
-</div>
-<ul>
-<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Ambas as chamadas retornam o tamanho de um <code>int</code>, mas a primeira usa o nome do tipo e a segunda usa uma variável.</li>
-</ul>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h3 id="%F0%9F%93%8A-tamanhos-comuns-de-tipos-primitivos"><img class="emoji" draggable="false" alt="📊" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ca.svg" data-marp-twemoji=""/> Tamanhos Comuns de Tipos Primitivos</h3>
-<table>
-<thead>
-<tr>
-<th>Tipo</th>
-<th>Tamanho (pode variar)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>char</code></td>
-<td>1 byte</td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td>4 bytes</td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>4 bytes</td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td>8 bytes</td>
-</tr>
-<tr>
-<td><code>long</code></td>
-<td>4 ou 8 bytes</td>
-</tr>
-<tr>
-<td><code>short</code></td>
-<td>2 bytes</td>
-</tr>
-</tbody>
-</table>
-<p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <strong>Os tamanhos podem variar dependendo do sistema e compilador!</strong></p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="2" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h3 id="%F0%9F%94%84-sizeof-com-vectores"><img class="emoji" draggable="false" alt="🔄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f504.svg" data-marp-twemoji=""/> <code>sizeof</code> com Vectores</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> <span class="hljs-built_in">vector</span>[<span class="hljs-number">10</span>];
-
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho do vector: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>));
-
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho de um elemento: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>[<span class="hljs-number">0</span>]));
-
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Número de elementos: %lu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>) / <span class="hljs-keyword">sizeof</span>(<span class="hljs-built_in">vector</span>[<span class="hljs-number">0</span>]));
-</code></pre>
-<ul>
-<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>sizeof(vector)</code> retorna o tamanho total do array em bytes.</li>
-<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Para obter o número de elementos, dividimos pelo tamanho de um único elemento.</li>
-</ul>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="3" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="20" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h3 id="%E2%9A%A0%EF%B8%8F-sizeof-em-vectores-dentro-de-fun%C3%A7%C3%B5es"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <code>sizeof</code> em Vectores dentro de Funções</h3>
-<small>
-<ul>
-<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>Não é possível obter o tamanho real do vetor passado como argumento para uma função.</strong> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" data-marp-twemoji=""/></li>
-</ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">tamanhoArray</span><span class="hljs-params">(<span class="hljs-type">int</span> v[])</span> {
-  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho dentro da função: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(v));
-}
-
-<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
-  <span class="hljs-type">int</span> arr[<span class="hljs-number">10</span>];
-  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Tamanho no main: %lu bytes\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(arr));
-  tamanhoArray(arr);
-  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
-</code></pre>
-<ul>
-<li data-marpit-fragment="2"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> No <code>main()</code>, <code>sizeof(arr)</code> retorna o tamanho correto.</li>
-<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" data-marp-twemoji=""/> Dentro da função, <code>sizeof(arr)</code> retorna o tamanho de um ponteiro, <strong>não do vector</strong> <img class="emoji" draggable="false" alt="😱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f631.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="😱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f631.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="😭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f62d.svg" data-marp-twemoji=""/>.</li>
-</ul>
-</small>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="21" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
@@ -785,6 +784,104 @@ palavra = <span class="hljs-string">&quot;TRUE&quot;</span>; <span class="hljs-c
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="30" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%93%8C-printf-com-strings"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <code>printf()</code> com Strings</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, var);  <span class="hljs-comment">// Imprime a string normalmente</span>
+
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%10s\n&quot;</span>, var); <span class="hljs-comment">// Alinha à direita com espaço mínimo de 10 caracteres</span>
+
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%-10s\n&quot;</span>, var); <span class="hljs-comment">// Alinha à esquerda</span>
+
+<span class="hljs-built_in">puts</span>(var); <span class="hljs-comment">// Similar ao printf(&quot;%s\n&quot;, var)</span>
+</code></pre>
+<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>puts()</code> sempre adiciona <code>\n</code> no final.</p>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="31" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%93%8C-scanf-com-strings"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <code>scanf()</code> com Strings</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, nome);  <span class="hljs-comment">// Lê até encontrar espaço ou \n</span>
+<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%5s&quot;</span>, nome);  <span class="hljs-comment">// Lê até 5 caracteres</span>
+
+<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%[^\n]s&quot;</span>, nome); <span class="hljs-comment">// Lê até \n</span>
+
+fgets(nome, <span class="hljs-number">128</span>, <span class="hljs-built_in">stdin</span>); <span class="hljs-comment">// Alternativa segura</span>
+</code></pre>
+<p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <code>scanf(&quot;%s&quot;, nome);</code> <strong>não usa <code>&amp;</code></strong></p>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="32" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%8E%AD-converter-para-mai%C3%BAsculas"><img class="emoji" draggable="false" alt="🎭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3ad.svg" data-marp-twemoji=""/> Converter para Maiúsculas</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;ctype.h&gt;</span></span>
+<span class="hljs-type">void</span> <span class="hljs-title function_">str_to_upper</span><span class="hljs-params">(<span class="hljs-type">char</span> str[])</span> {
+  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; str[i] != <span class="hljs-string">&#x27;\0&#x27;</span> ; i++)
+    str[i] = <span class="hljs-built_in">toupper</span>(str[i]);
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+  <span class="hljs-type">char</span> fish[<span class="hljs-number">100</span>] = <span class="hljs-string">&quot;halibut&quot;</span>;
+  str_to_upper(fish);
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, fish); <span class="hljs-comment">// Imprime &quot;HALIBUT&quot;</span>
+}
+</code></pre>
+<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Usa <code>&lt;ctype.h&gt;</code> para manipulação de caracteres.</p>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="33" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%93%9D-implementa%C3%A7%C3%A3o-de-strcpy"><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" data-marp-twemoji=""/> Implementação de <code>strcpy</code></h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">str_copy</span><span class="hljs-params">(<span class="hljs-type">char</span> dest[], <span class="hljs-type">char</span> src[])</span> {
+  <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">do</span> {
+    dest[i] = src[i];
+  } <span class="hljs-keyword">while</span> (src[i++] != <span class="hljs-string">&#x27;\0&#x27;</span>);
+}
+</code></pre>
+<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Alternativa compacta:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">str_copy</span><span class="hljs-params">(<span class="hljs-type">char</span> dest[], <span class="hljs-type">char</span> src[])</span> {
+  <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> ((dest[i] = src[i++]) != <span class="hljs-string">&#x27;\0&#x27;</span>);
+}
+</code></pre>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="34" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%93%9A-biblioteca-stringh"><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Biblioteca <code>&lt;string.h&gt;</code></h1>
+<h2 id="%F0%9F%94%A5-fun%C3%A7%C3%B5es-%C3%BAteis-para-strings"><img class="emoji" draggable="false" alt="🔥" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f525.svg" data-marp-twemoji=""/> Funções úteis para Strings</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">strcpy</span>(<span class="hljs-type">char</span> *dest, <span class="hljs-type">char</span> *src);  <span class="hljs-comment">// Copia strings</span>
+<span class="hljs-built_in">strcat</span>(<span class="hljs-type">char</span> *s1, <span class="hljs-type">char</span> *s2);    <span class="hljs-comment">// Concatena strings (resultado em s1)</span>
+<span class="hljs-built_in">strlen</span>(<span class="hljs-type">char</span> * s);             <span class="hljs-comment">// Retorna o tamanho</span>
+<span class="hljs-built_in">strcmp</span>(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2);             <span class="hljs-comment">// Compara strings</span>
+strcasecmp(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2);       <span class="hljs-comment">// Compara strings ignorando o &#x27;case&#x27;</span>
+<span class="hljs-built_in">strncmp</span>(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2, <span class="hljs-type">int</span> n)          <span class="hljs-comment">// comparar apenas `n` caracteres!</span>
+_stricmp(<span class="hljs-type">char</span> *dest, <span class="hljs-type">char</span> *src) <span class="hljs-comment">// compara strings - compiladores para Windows</span>
+</code></pre>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="35" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h1 id="%F0%9F%8E%AF-resumo"><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3af.svg" data-marp-twemoji=""/> Resumo</h1>
+<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Strings em C são vetores terminados em <code>\0</code>.<br />
+<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Use <code>&lt;string.h&gt;</code> para manipular strings corretamente.<br />
+<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>Não</strong> compare strings com <code>==</code>, use <code>strcmp()</code>.<br />
+<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>printf()</code> e <code>scanf()</code> têm formatos especiais para strings.<br />
+<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>Cuidado com buffer overflow</strong> ao lidar com strings!</p>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="36" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
+<h2 id="%E2%9D%93-quizz---strings"><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2753.svg" data-marp-twemoji=""/>  Quizz - Strings</h2>
+<br />
+<p><img src="socrative.png" alt="center" style="width:200px;" /></p>
+<br />
+<ul>
+<li>No campo nome devem colocar o <strong>número de aluno</strong> 2XXXXXXX.</li>
+</ul>
+<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="37" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h1 id="%F0%9F%93%A2-exerc%C3%ADcio---o-que-ser%C3%A1-impresso"><img class="emoji" draggable="false" alt="📢" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4e2.svg" data-marp-twemoji=""/> Exercício - O que será impresso?</h1>
 <div class='grid'>
 <div>
@@ -816,7 +913,7 @@ palavra = <span class="hljs-string">&quot;TRUE&quot;</span>; <span class="hljs-c
 </div>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="31" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="38" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
 <header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
 <h1 id="%E2%9C%85-resposta"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Resposta</h1>
 <p>A saída é <strong>b) <code>Use_the_for</code></strong> <img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3af.svg" data-marp-twemoji=""/></p>
@@ -824,103 +921,6 @@ palavra = <span class="hljs-string">&quot;TRUE&quot;</span>; <span class="hljs-c
 <ul>
 <li><code>s[11] = '\0';</code> corta a string após <strong><code>Use_the_for</code></strong>.</li>
 <li>O resto da memória <strong>ainda contém os caracteres antigos</strong>, mas a string <strong>termina no <code>\0</code>!</strong></li>
-</ul>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="32" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%93%8C-printf-com-strings"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <code>printf()</code> com Strings</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, var);  <span class="hljs-comment">// Imprime a string normalmente</span>
-
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%10s\n&quot;</span>, var); <span class="hljs-comment">// Alinha à direita com espaço mínimo de 10 caracteres</span>
-
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%-10s\n&quot;</span>, var); <span class="hljs-comment">// Alinha à esquerda</span>
-
-<span class="hljs-built_in">puts</span>(var); <span class="hljs-comment">// Similar ao printf(&quot;%s\n&quot;, var)</span>
-</code></pre>
-<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>puts()</code> sempre adiciona <code>\n</code> no final.</p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="33" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%93%8C-scanf-com-strings"><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <code>scanf()</code> com Strings</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, nome);  <span class="hljs-comment">// Lê até encontrar espaço ou \n</span>
-<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%5s&quot;</span>, nome);  <span class="hljs-comment">// Lê até 5 caracteres</span>
-
-<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%[^\n]s&quot;</span>, nome); <span class="hljs-comment">// Lê até \n</span>
-
-fgets(nome, <span class="hljs-number">128</span>, <span class="hljs-built_in">stdin</span>); <span class="hljs-comment">// Alternativa segura</span>
-</code></pre>
-<p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> <code>scanf(&quot;%s&quot;, nome);</code> <strong>não usa <code>&amp;</code></strong></p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="34" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%8E%AD-converter-para-mai%C3%BAsculas"><img class="emoji" draggable="false" alt="🎭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3ad.svg" data-marp-twemoji=""/> Converter para Maiúsculas</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;ctype.h&gt;</span></span>
-<span class="hljs-type">void</span> <span class="hljs-title function_">str_to_upper</span><span class="hljs-params">(<span class="hljs-type">char</span> str[])</span> {
-  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; str[i] != <span class="hljs-string">&#x27;\0&#x27;</span> ; i++)
-    str[i] = <span class="hljs-built_in">toupper</span>(str[i]);
-}
-
-<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
-  <span class="hljs-type">char</span> fish[<span class="hljs-number">100</span>] = <span class="hljs-string">&quot;halibut&quot;</span>;
-  str_to_upper(fish);
-  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, fish); <span class="hljs-comment">// Imprime &quot;HALIBUT&quot;</span>
-}
-</code></pre>
-<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Usa <code>&lt;ctype.h&gt;</code> para manipulação de caracteres.</p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="35" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%93%9D-implementa%C3%A7%C3%A3o-de-strcpy"><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" data-marp-twemoji=""/> Implementação de <code>strcpy</code></h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">str_copy</span><span class="hljs-params">(<span class="hljs-type">char</span> dest[], <span class="hljs-type">char</span> src[])</span> {
-  <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">do</span> {
-    dest[i] = src[i];
-  } <span class="hljs-keyword">while</span> (src[i++] != <span class="hljs-string">&#x27;\0&#x27;</span>);
-}
-</code></pre>
-<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Alternativa compacta:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">void</span> <span class="hljs-title function_">str_copy</span><span class="hljs-params">(<span class="hljs-type">char</span> dest[], <span class="hljs-type">char</span> src[])</span> {
-  <span class="hljs-keyword">while</span> ((dest[i] = src[i++]) != <span class="hljs-string">&#x27;\0&#x27;</span>);
-}
-</code></pre>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="36" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%93%9A-biblioteca-stringh"><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Biblioteca <code>&lt;string.h&gt;</code></h1>
-<h2 id="%F0%9F%94%A5-fun%C3%A7%C3%B5es-%C3%BAteis-para-strings"><img class="emoji" draggable="false" alt="🔥" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f525.svg" data-marp-twemoji=""/> Funções úteis para Strings</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-built_in">strcpy</span>(<span class="hljs-type">char</span> *dest, <span class="hljs-type">char</span> *src);  <span class="hljs-comment">// Copia strings</span>
-<span class="hljs-built_in">strcat</span>(<span class="hljs-type">char</span> *s1, <span class="hljs-type">char</span> *s2);    <span class="hljs-comment">// Concatena strings (resultado em s1)</span>
-<span class="hljs-built_in">strlen</span>(<span class="hljs-type">char</span> * s);             <span class="hljs-comment">// Retorna o tamanho</span>
-<span class="hljs-built_in">strcmp</span>(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2);             <span class="hljs-comment">// Compara strings</span>
-strcasecmp(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2);       <span class="hljs-comment">// Compara strings ignorando o &#x27;case&#x27;</span>
-<span class="hljs-built_in">strncmp</span>(<span class="hljs-type">char</span> * s1, <span class="hljs-type">char</span> * s2, <span class="hljs-type">int</span> n)          <span class="hljs-comment">// comparar apenas `n` caracteres!</span>
-_stricmp(<span class="hljs-type">char</span> *dest, <span class="hljs-type">char</span> *src) <span class="hljs-comment">// compara strings - compilados para Windows</span>
-</code></pre>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="37" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h1 id="%F0%9F%8E%AF-resumo"><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3af.svg" data-marp-twemoji=""/> Resumo</h1>
-<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Strings em C são vetores terminados em <code>\0</code>.<br />
-<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> Use <code>&lt;string.h&gt;</code> para manipular strings corretamente.<br />
-<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>Não</strong> compare strings com <code>==</code>, use <code>strcmp()</code>.<br />
-<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <code>printf()</code> e <code>scanf()</code> têm formatos especiais para strings.<br />
-<img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>Cuidado com buffer overflow</strong> ao lidar com strings!</p>
-<footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-header="📚 Linguagens de Programação 1 | LEI, LEIRT, LIG" data-footer="![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt" data-theme="default" lang="en-US" data-marpit-pagination="38" style="--paginate:true;--header:📚 Linguagens de Programação 1 | LEI, LEIRT, LIG;--footer:![logo](./logo_lp1.png)![logo](./logo_lusofona.png)  Pedro Arroz Serra | pedro.serra@ulusofona.pt;--theme:default;" data-marpit-pagination-total="55">
-<header><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" data-marp-twemoji=""/> Linguagens de Programação 1 | LEI, LEIRT, LIG</header>
-<h2 id="%E2%9D%93-quizz---strings"><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2753.svg" data-marp-twemoji=""/>  Quizz - Strings</h2>
-<br />
-<p><img src="socrative.png" alt="center" style="width:200px;" /></p>
-<br />
-<ul>
-<li>No campo nome devem colocar o <strong>número de aluno</strong> 2XXXXXXX.</li>
 </ul>
 <footer><img src="./logo_lp1.png" alt="logo" /><img src="./logo_lusofona.png" alt="logo" />  Pedro Arroz Serra | <a href="mailto:pedro.serra@ulusofona.pt">pedro.serra@ulusofona.pt</a></footer>
 </section>
