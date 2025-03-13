@@ -988,40 +988,6 @@ Galo[2][2] = 'O';
 ```
 
 ✅ `Galo[2][2]` armazena `'O'`.
-
----
-
-
-# 🔄 Percorrer Matrizes
-
-💡 **Dica**: percorre **linha a linha**!
-
-```c
-for (int i = 0; i < 2; i++) {
-  for (int j = 0; j < 3; j++) {
-    printf("Soco[%d][%d]: %d\n", i, j, socos[i][j]);
-  }
-}
-```
-
-
----
-
-# 🔥 Matrizes em Funções
-
-```c
-void mostrar(int socos[][3], int linhas) {
-  for (int i = 0; i < linhas; i++) {
-    for (int j = 0; j < 3; j++) {
-      printf("%d ", socos[i][j]);
-    }
-    printf("\n");
-  }
-}
-```
-
-📌 **Dica**: TEMOS de especificar o número de colunas ao passar matrizes para funções! 🚨
-
 ---
 
 # 🚀 Inicialização Automática
@@ -1111,9 +1077,10 @@ int scores[3][] = {
 
 ---
 
-## 🎯 Exercício: Qual é o erro?
+## 🎯 Exercício: Encontra 4 erros no código abaixo?
 
-📌 **O código abaixo não funciona corretamente. Por quê?**
+* 📌 Objectivo é que o vector `acc` guarde em cada elemento a soma das linhas da matriz. I.e. `acc[0] = scores[0][0] + scores[0][1] + scores[0][2]`, `acc[1] = scores[1][0] + scores[1][1] + scores[1][2]`... 
+
 
 ```c
 int main() {
@@ -1121,11 +1088,11 @@ int main() {
   int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
   int acc[n]; // Vector para armazenar a soma das linhas
 
-    for (i = 0; i < 3; i++) {
-      for (j = 0; j <= 3; j++) {
-        acc[i] += scores[j][i];
-      }
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j <= 3; j++) {
+      acc[i] += scores[j][i];
     }
+  }
   return 0;
 }
 ```
@@ -1133,7 +1100,7 @@ int main() {
 
 ---
 
-## 🎯 Exercício: Qual é o erro?
+## 🎯 Exercício: Encontra 4 erros no código abaixo?
 
 📌 **O código abaixo não funciona corretamente. Por quê?**
 
@@ -1141,13 +1108,13 @@ int main() {
 int main() {
   int n = 3, i, j;
   int scores[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-  int acc[n]; // ❌ ERRO: VLA. 
+  int acc[n]; // ❌ 2 ERROS: 1 - VLA, 2 - Falta inicializar
 
-    for (i = 0; i < 3; i++) {
-      for (j = 0; j <= 3; j++) {  // ❌ ERRO: iteracao vai até 3 inclusive
-        acc[i] += scores[j][i]; // ❌ ERRO: troca linhas por colunas
-      }
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j <= 3; j++) {  // ❌ ERRO: iteracao vai até 3 inclusive
+      acc[i] += scores[j][i]; // ❌ ERRO: troca linhas por colunas
     }
+  }
   return 0;
 }
 ```
@@ -1155,7 +1122,7 @@ int main() {
 
 ---
 
-## 🎯 Exercício: Qual é o erro?
+## 🎯 Exercício: Encontra 4 erros no código abaixo?
 
 ✅ **Correcção**
 
@@ -1165,13 +1132,13 @@ int main() {
 int main() {
   int i, j;
   int scores[][DIM] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-  int acc[DIM]; 
+  int acc[DIM] = {0}; // inicializa todos os elementos a 0
 
-    for (i = 0; i < 3; i++) {
-      for (j = 0; j < 3; j++) {
-        acc[i] += scores[i][j];
-      }
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+      acc[i] += scores[i][j];
     }
+  }
   return 0;
 }
 ```
@@ -1179,71 +1146,95 @@ int main() {
 
 ---
 
-# 📤 Passagem de Matrizes para Funções
+## 📥 Passagem de Matrizes para Funções
 
-* **Devemos especificar o número de colunas ao passar uma matriz para uma função**:
+📌 **Dica**: TEMOS de especificar o número de colunas ao passar matrizes para funções! 🚨
 
-   ```c
-   #define DIM 5
-   void inic(char s[][DIM]) {
-       s[0][0] = 'e';
-       s[0][1] = 'e';
-       s[0][2] = 'u';
-       s[0][3] = 'l';
-   }
-   ```
+<div class='grid'>
+<div>
 
-✅ **No `main()`**:
+```c
+#define DIM 5
+void inic(char s[][DIM]) {
+  s[0][0] = 'e';
+  s[0][1] = 'e';
+  s[0][2] = 'u';
+  s[0][3] = 'l';
+}
+```
 
-   ```c
-   int main(void) {
-       char soup[DIM][DIM];
-       inic(soup);
-       return 0;
-   }
-   ```
+```c
+int main(void) {
+  char soup[DIM][DIM];
+  inic(soup);
+  return 0;
+}
+```
+
+</div><div>
+
+* A função que recebe a Matriz, recebe-a por **referência**, e por isso ela pode alterar o conteúdo da matriz original.
+
+* Ou seja, no exemplo, o `main()` vai ficar com a matriz alterada pela função `inic()`
+
+</div></div>
+
+---
+
+## 📤 Retorno de Matrizes de Funções
+
+📌 **Dica**: TEMOS de especificar o número de colunas ao passar matrizes para funções! 🚨
+
+<div class='grid'>
+<div>
+
+
+❌ **ERRO GRAVE**: Não podemos retornar uma matriz local. Ela vai "desaparecer" da memória e a função que está a invocar não vai conseguir aceder à matriz.
+
+```c
+#define DIM 3
+double ** eye() {
+  double eye[][DIM] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+  return eye;
+}
+```
+
+</div><div>
+
+✅ **Solução**: Receber a matriz por parâmero e retornar a mesma matriz.
+
+```c
+#define DIM 3
+double ** eye(double eye[][DIM]) {
+  eye[0][0] = eye[1][1] = eye[1][1] = 1;
+  eye[0][1] = eye[0][2] = 0;
+  eye[1][0] = eye[1][2] = 0;
+  eye[2][0] = eye[2][1] = 0;
+  return eye;
+}
+```
+
+</div></div>
 
 ---
 
 # 🔄 Percorrendo uma Matriz
 
-✅ **Para percorrer uma matriz, usamos dois loops aninhados**:
+* ✅ **Para percorrer uma matriz, usamos dois loops aninhados**:
 
-   ```c
-   for (i = 0; i < 4; i++) {
-       for (j = 0; j < 4; j++) {
-           printf("%d ", matriz[i][j]);
-       }
-       printf("\n");
-   }
-   ```
-
-🔹 **Primeiro loop** percorre as linhas.  
-🔹 **Segundo loop** percorre as colunas.
-
----
-
-# 🔄 Exemplo: Percorrendo e Imprimindo uma Matriz
+* 💡 **Dica**: percorre **linha a linha**!
 
 ```c
-int main(void) {
-  char soup[][5] = {
-    {'e', 'e', 'k', 'u', 'l'},
-    {'u', 'c', 'x', 'q', 'n'},
-    {'t', 's', 'r', 'd', 'r'},
-    {'y', 'h', 'e', 'o', 'j'},
-    {'v', 'q', 'e', 'w', 'f'}
-  };
-
-  for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 5; j++)
-      printf("'%c' ", soup[i][j]);
-    putchar('\n');
+for (i = 0; i < 4; i++) {
+  for (j = 0; j < 4; j++) {
+    printf("%d ", matriz[i][j]);
   }
+  printf("\n");
 }
 ```
 
-✅ **Imprime todos os elementos da matriz `soup`**.
+🔹 **Primeiro loop** percorre as linhas.  
+🔹 **Segundo loop** percorre as colunas.
 
 ---
 
