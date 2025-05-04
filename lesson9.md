@@ -103,7 +103,7 @@ printf("\aAula #9\n");
 </div>
 <div>
 
-![center](lesson9_images/memory.png)
+![w:800 center](lesson9_images/memory_organization.svg)
 
 </div>
 </div>
